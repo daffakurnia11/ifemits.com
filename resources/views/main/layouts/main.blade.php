@@ -15,7 +15,7 @@
   <!-- AOS -->
   <link rel="stylesheet" href="/vendor/aos/dist/aos.css" />
 
-  <title>IFEM 2022 - Homepage</title>
+  <title>IFEM 2022 - {{ $title }}</title>
 </head>
 
 <body>

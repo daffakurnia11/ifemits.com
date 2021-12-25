@@ -1,0 +1,59 @@
+#emptyState {
+    overflow: hidden;
+    min-height: 100vh;
+    position: relative;
+    .state {
+        &-title {
+            font-family: $font-mova;
+            font-size: 5.25rem;
+            color: $color-white;
+            text-shadow: 0px 0px 10px $color-white;
+        }
+    }
+    .state-icon1 {
+        width: 600px;
+        max-width: 100%;
+        position: absolute;
+        top: -3rem;
+        left: -4rem;
+        z-index: -1;
+    }
+    .state-icon2 {
+        position: absolute;
+        bottom: -10rem;
+        right: -8rem;
+        width: 900px;
+        max-width: 100%;
+        transform: rotateY(180deg);
+    }
+    .state-logo {
+        position: absolute;
+        top: 2rem;
+        right: 3rem;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    #emptyState {
+        .state {
+            &-title {
+                font-size: 3rem;
+            }
+        }
+        .state-icon1 {
+            width: 300px;
+            top: -3rem;
+            left: -4rem;
+        }
+        .state-icon2 {
+            bottom: -4rem;
+            right: -3rem;
+            width: 900px;
+        }
+        .state-logo {
+            position: absolute;
+            top: 1.5rem;
+            right: 1rem;
+        }
+    }
+}

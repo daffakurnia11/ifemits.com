@@ -1,0 +1,421 @@
+// Navigation Bar
+.navbar {
+    background: linear-gradient(180deg, #4e489c 0%, rgba(0, 12, 48, 0.3) 100%);
+    &-nav {
+        .nav-item {
+            margin: auto 25px;
+            a.nav-link {
+                width: fit-content;
+                color: $color-white;
+                font-family: $font-poppins;
+                text-transform: uppercase;
+            }
+            &.active {
+                position: relative;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    background: linear-gradient(
+                        to right,
+                        $color-lightblue,
+                        #9309ff
+                    );
+                    width: 100%;
+                    height: 2px;
+                    box-shadow: 0px 0px 2px $color-white;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+            .dropdown-menu {
+                @include border-gradient();
+                background-color: transparent;
+                width: inherit;
+                .dropdown-item {
+                    color: $color-white;
+                    font-size: 1rem;
+                    transition: ease-in-out 0.3s;
+                    &:hover {
+                        background-color: transparent;
+                        text-shadow: 0px 0px 10px #ffffff;
+                    }
+                }
+            }
+        }
+    }
+    &-toggler {
+        .fas {
+            color: $color-white;
+        }
+    }
+}
+// End of Navigation Bar
+
+// Header
+#landingHeader {
+    overflow: hidden;
+    background-image: url("../img/bg/landing-header.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: -2;
+    min-height: calc(100vh - 100px);
+    color: $color-white;
+    .header {
+        min-height: calc(100vh - 100px);
+        position: relative;
+        &-title {
+            font-family: $font-mova;
+            font-size: 6rem;
+            line-height: 6rem;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+                0px 0px 10px $color-white;
+        }
+        &-subtitle {
+            font-family: $font-mova;
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+        }
+        &-icon {
+            width: 118px;
+            max-width: 100%;
+        }
+        &-icon2 {
+            width: 1800px;
+        }
+    }
+}
+// End of Header
+
+// About
+#landingAbout {
+    min-height: 80vh;
+    overflow: hidden;
+    position: relative;
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 120px;
+        z-index: 5;
+        content: "";
+        background: linear-gradient(
+            180deg,
+            #1e265c 0%,
+            rgba(0, 12, 48, 0) 100%
+        );
+    }
+    .about {
+        background: linear-gradient(90deg, $color-purple 0%, $color-blue 100%);
+        position: relative;
+        margin: 120px 2rem;
+        padding: 1.75rem 2.7rem;
+        max-width: 900px;
+        min-height: 356px;
+        &-container {
+            border: 2px solid $color-white;
+            box-sizing: border-box;
+            padding: 3.75rem;
+        }
+        &-content {
+            color: $color-white;
+            font-family: $font-alternates;
+            font-weight: 500;
+            font-size: 1.35rem;
+            line-height: 1.75rem;
+        }
+        &-shadow {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: linear-gradient(
+                90deg,
+                rgba(78, 72, 156, 0.5) 0%,
+                rgba(30, 38, 92, 0.5) 100%
+            );
+            transform: rotate(-1.52deg);
+        }
+        &-icon1 {
+            position: absolute;
+            bottom: -7rem;
+            right: 0;
+            z-index: 10;
+        }
+        &-icon2 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -50%);
+            z-index: -1;
+        }
+    }
+    .about-icon3 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+// End of About
+
+// Teaser
+#landingTeaser {
+    position: relative;
+    min-height: 80vh;
+    .teaser {
+        margin: 2rem auto;
+        &-content {
+            .teaser-title {
+                font-family: $font-alternates;
+                font-weight: bold;
+                font-size: 3rem;
+                color: $color-white;
+                text-transform: uppercase;
+            }
+        }
+        &-video {
+            max-width: 800px;
+            // height: 440px;
+            @include border-gradient();
+        }
+    }
+    .teaser-wave-left {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .teaser-wave-right {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        transform: rotateY(180deg);
+    }
+}
+// End of Teaser
+
+// Events
+#landingEvent {
+    .event {
+        &-title {
+            width: fit-content;
+            @include border-gradient();
+            padding: 1.25rem 5.5rem;
+            font-family: $font-alternates;
+            font-weight: bold;
+            font-size: 3rem;
+            line-height: 59px;
+            color: $color-white;
+            text-transform: uppercase;
+        }
+        &-list {
+            max-width: 250px;
+            height: 210px;
+            position: relative;
+            .list-triangle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+                transition: ease-in-out 0.3s;
+            }
+            &:hover {
+                cursor: pointer;
+                .list-triangle {
+                    // transform: translate(-50%, -50%) rotate(16.62deg);
+                    filter: drop-shadow(0 0 5px $color-white);
+                }
+            }
+            .list-title {
+                font-family: $font-mova;
+                font-size: 3rem;
+                line-height: 3rem;
+                text-align: center;
+                color: $color-white;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+// End of Events
+
+// Footer
+#footer {
+    .footer-title {
+        font-family: $font-alternates;
+        font-weight: bold;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        text-align: center;
+        color: $color-white;
+    }
+    .footer-logo {
+        color: $color-white;
+    }
+}
+// End of Footer
+
+@media screen and (max-width: 1200px) {
+    // Header
+    #landingHeader {
+        .header {
+            &-icon2 {
+                width: 1300px;
+                top: 50%;
+                left: 50%;
+            }
+        }
+    }
+    // End of Header
+
+    // About
+    #landingAbout {
+        .about {
+            &-icon2 {
+                transform: translate(0, -50%);
+            }
+        }
+    }
+    // End of About
+}
+
+@media screen and (max-width: 768px) {
+    // Header
+    #landingHeader {
+        .header {
+            margin-top: 40px;
+            &-icon2 {
+                width: 1000px;
+                top: 75%;
+                left: 50%;
+            }
+            &-title {
+                font-size: 4.5rem;
+                line-height: 4.5rem;
+            }
+            &-subtitle {
+                font-size: 1.75rem;
+            }
+        }
+    }
+    // End of Header
+
+    // Teaser
+    #landingTeaser {
+        .teaser-wave-left,
+        .teaser-wave-right {
+            max-width: 300px;
+        }
+    }
+    // End of Teaser
+}
+
+@media screen and (max-width: 568px) {
+    // Header
+    #landingHeader {
+        min-height: calc(90vh - 100px);
+        .header {
+            min-height: calc(90vh - 100px);
+            margin-top: 0;
+            &-icon2 {
+                width: 700px;
+                top: 75%;
+                left: 50%;
+            }
+            &-subtitle {
+                font-size: 1.5rem;
+                line-height: 1.5rem;
+            }
+        }
+    }
+    // End of Header
+
+    // About
+    #landingAbout {
+        .about {
+            padding: 1.5rem 1.7rem;
+            &-container {
+                padding: 1rem;
+            }
+            &-content {
+                font-size: 1rem;
+            }
+            &-icon1 {
+                width: 150px;
+                bottom: -4rem;
+            }
+            &-icon2 {
+                width: 150px;
+            }
+        }
+        .about-icon3 {
+            top: 50px;
+            left: -20%;
+            width: 200px;
+        }
+    }
+    // End of About
+
+    // Teaser
+    #landingTeaser {
+        .teaser {
+            &-content {
+                .teaser-gradient {
+                    width: 150px;
+                }
+                .teaser-title {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        .teaser-wave-left,
+        .teaser-wave-right {
+            max-width: 150px;
+        }
+    }
+    // End of Teaser
+
+    // Events
+    #landingEvent {
+        .event {
+            &-title {
+                font-size: 1.5rem;
+                padding: 1rem 4rem;
+            }
+            &-list {
+                height: 120px;
+                .list-triangle {
+                    max-width: 120px;
+                }
+                .list-title {
+                    font-family: $font-mova;
+                    font-size: 1.25rem;
+                    line-height: 1.5rem;
+                    text-align: center;
+                    color: $color-white;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    // End of Events
+
+    // Footer
+    #footer {
+        .footer-logo {
+            color: $color-white;
+            &.fa-3x {
+                font-size: 2em;
+            }
+        }
+    }
+    // End of Footer
+}

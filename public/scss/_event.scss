@@ -1,0 +1,635 @@
+// Header
+#eventHeader {
+    overflow: hidden;
+    background-image: url("../img/bg/event-header.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: -2;
+    min-height: calc(100vh - 100px);
+    color: $color-white;
+    .header {
+        min-height: calc(100vh - 100px);
+        &-title {
+            font-family: $font-mova;
+            font-size: 6rem;
+            line-height: 6rem;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+                0px 0px 10px $color-white;
+            text-transform: uppercase;
+        }
+        &-subtitle {
+            width: 600px;
+            max-width: 100%;
+            padding: 1.5rem 2.75rem;
+            font-family: Montserrat Alternates;
+            font-weight: 800;
+            font-size: 1.75rem;
+            line-height: 2rem;
+            @include border-gradient();
+            box-shadow: 0px 0px 10px $color-white;
+        }
+    }
+}
+// End of Header
+
+.register-button {
+    @include border-rounded-gradient();
+    margin-top: 3rem;
+    max-width: 750px;
+    padding: 1.5rem 0;
+    font-family: $font-alternates;
+    font-weight: 800;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    text-align: center;
+    color: $color-white;
+    transition: ease-in-out 0.3s;
+    &:hover {
+        color: $color-white;
+        text-shadow: 0px 0px 10px $color-white;
+        box-shadow: 0px 0px 10px $color-white;
+    }
+    @media screen and (max-width: 576px) {
+        font-size: 1.75rem;
+        padding: 1rem;
+    }
+}
+
+// About
+#eventAbout {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 120px;
+        z-index: 5;
+        content: "";
+        background: linear-gradient(
+            180deg,
+            #1e265c 0%,
+            rgba(0, 12, 48, 0) 100%
+        );
+    }
+    .about {
+        margin: 5rem auto;
+        position: relative;
+        &-content {
+            @include border-rounded-gradient();
+            font-family: $font-alternates;
+            font-weight: 500;
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            text-align: justify;
+            color: $color-white;
+            padding: 4.5rem;
+        }
+        &-icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-40%, -40%);
+            z-index: 2;
+        }
+    }
+}
+// End of About
+
+// Topic
+#eventTopic {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    .topic {
+        @include arrow-title();
+        &-content {
+            margin-top: 3rem;
+            padding: 2rem;
+            @include border-rounded-gradient();
+            max-width: 1000px;
+            .topic-name {
+                background-color: transparent;
+                width: 100%;
+                border: none;
+                font-family: $font-alternates;
+                font-weight: 800;
+                font-size: 1.75rem;
+                line-height: 2rem;
+                color: $color-white;
+                margin-bottom: 2rem;
+            }
+            .topic-desc {
+                margin-bottom: 0;
+                font-family: $font-alternates;
+                font-size: 1.25rem;
+                font-size: 1.5rem;
+                text-align: center;
+                letter-spacing: 0.07em;
+                color: $color-white;
+            }
+        }
+    }
+    .topic-icon1 {
+        width: 330px;
+        max-width: 100%;
+        position: absolute;
+        top: 30%;
+        left: 0;
+        transform: translateY(-50%);
+        mix-blend-mode: overlay;
+        z-index: -2;
+    }
+    .topic-icon2 {
+        width: 425px;
+        max-width: 100%;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        z-index: -1;
+    }
+}
+// End of Topic
+
+// Speaker
+#eventSpeaker {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    .speaker {
+        @include arrow-title();
+        max-width: 1200px;
+        &-content {
+            margin-top: 4rem;
+            @include border-rounded-gradient();
+            padding: 2rem;
+            .speaker-photo {
+                width: 320px;
+                max-width: 100%;
+            }
+            .speaker-detail {
+                font-family: $font-alternates;
+                font-weight: 800;
+                font-size: 2.5rem;
+                line-height: 3rem;
+                color: $color-white;
+            }
+        }
+    }
+    .speaker-icon1 {
+        position: absolute;
+        top: 3rem;
+        right: 0;
+        z-index: -1;
+    }
+    .speaker-icon2 {
+        width: 150px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+// Speaker
+
+// Timeline
+#eventTimeline {
+    .timeline {
+        .gradientbox-title {
+            @include border-gradient();
+            max-width: 450px;
+            padding: 1.5rem 0;
+            margin: 4rem auto;
+            font-family: $font-alternates;
+            font-weight: bold;
+            font-size: 3rem;
+            text-align: center;
+            text-transform: uppercase;
+            color: $color-white;
+        }
+        &-content {
+            max-width: 500px;
+            margin-bottom: 100px;
+            position: relative;
+            .line {
+                position: absolute;
+                content: "";
+                width: 2px;
+                height: 90%;
+                top: 10px;
+                right: 143px;
+                background-color: $color-white;
+            }
+            .timeline-desc {
+                font-family: $font-alternates;
+                font-weight: 600;
+                font-size: 1.25rem;
+                color: $color-white;
+            }
+            .timeline-schedule {
+                @include border-circle-gradient();
+                width: 120px;
+                height: 120px;
+                span {
+                    font-family: $font-alternates;
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                    line-height: 1.75rem;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}
+// End of Timeline
+
+// Prize
+#eventPrize {
+    .prize {
+        @include arrow-title();
+        &-content {
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            @include border-rounded-gradient();
+            max-width: 1000px;
+            .prize-name {
+                font-family: $font-alternates;
+                font-weight: bold;
+                font-size: 1.25rem;
+                color: $color-white;
+            }
+            .prize-desc {
+                font-family: $font-alternates;
+                font-weight: 500;
+                font-size: 1.25rem;
+                color: $color-white;
+            }
+        }
+    }
+}
+// End of Prize
+
+// Information
+#eventInfo {
+    .info {
+        position: relative;
+        &-container {
+            margin-top: 4rem;
+            max-width: 750px;
+            background: linear-gradient(
+                90deg,
+                rgba(78, 72, 156, 0.5) 0%,
+                rgba(30, 38, 92, 0.5) 100%
+            );
+            padding: 1.5rem 2.5rem;
+            .info-content {
+                padding: 2rem 2.25rem;
+                border: 2px solid $color-white;
+                .info-title {
+                    font-family: $font-alternates;
+                    font-weight: bold;
+                    font-size: 1.25rem;
+                    color: $color-white;
+                    text-transform: uppercase;
+                }
+                .info-desc {
+                    font-family: $font-alternates;
+                    font-weight: 500;
+                    color: $color-white;
+                    li {
+                        margin: 0.25rem 0;
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+        &-icon1 {
+            width: 250px;
+            position: absolute;
+            top: 7rem;
+            right: 0;
+            z-index: -1;
+        }
+        &-icon2 {
+            width: 200px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+    }
+}
+// End of Information
+
+// Bundle
+#eventBundle {
+    @include arrow-title();
+    position: relative;
+    .bundle-icon1 {
+        max-width: 350px;
+        top: 20%;
+        left: 0;
+        position: absolute;
+        z-index: -3;
+        mix-blend-mode: overlay;
+    }
+    .bundle-icon2 {
+        width: 400px;
+        max-width: 100%;
+        position: absolute;
+        top: 60%;
+        right: 0;
+        z-index: -3;
+    }
+    .bundle {
+        .bundle-container {
+            max-width: 768px;
+        }
+        .bundle-card {
+            width: fit-content;
+            border: 9px solid $color-white;
+            box-sizing: border-box;
+            position: relative;
+            padding: 1.25rem 3rem;
+            margin: 4rem auto;
+            &::before {
+                position: absolute;
+                display: block;
+                content: "";
+                background: linear-gradient(
+                    90deg,
+                    $color-lightblue 0%,
+                    $color-purple 100%
+                );
+                opacity: 0.6;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: calc(100% + (2 * 2.25rem));
+                height: calc(100% + (2 * 1.5rem));
+                z-index: -1;
+            }
+            &::after {
+                position: absolute;
+                display: block;
+                content: "";
+                background: linear-gradient(90deg, #0d9efb 0%, #d17fe5 100%);
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-3deg);
+                width: calc(100% + (2 * 2.25rem));
+                height: calc(100% + (2 * 1.5rem));
+                z-index: -2;
+            }
+            .bundle-name {
+                font-family: $font-alternates;
+                font-weight: bold;
+                font-size: 1.75rem;
+                color: $color-white;
+            }
+            .bundle-desc {
+                font-family: $font-alternates;
+                font-weight: 800;
+                font-size: 1.25rem;
+                color: $color-white;
+            }
+        }
+        .bundle-regis {
+            padding: 1rem 3rem;
+            display: block;
+            max-width: 250px;
+            @include border-rounded-gradient();
+            font-family: $font-alternates;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: $color-white;
+            transition: ease-in-out 0.3s;
+            &:hover {
+                filter: drop-shadow(0px 0px 10px #ffffff);
+            }
+        }
+        .bundle-notes {
+            font-family: $font-poppins;
+            font-style: italic;
+            font-weight: 300;
+            font-size: 1rem;
+            color: $color-white;
+        }
+        .bundle-soon {
+            font-family: $font-alternates;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: $color-white;
+            text-transform: uppercase;
+        }
+    }
+}
+// End of Bundle
+
+// Date and Venue
+#eventSchedule {
+    position: relative;
+    .schedule-icon1 {
+        position: absolute;
+        top: 3rem;
+        right: 0;
+        z-index: -1;
+    }
+    .schedule-icon2 {
+        width: 150px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: -1;
+    }
+    .schedule {
+        &-title {
+            @include border-gradient();
+            width: fit-content;
+            padding: 1.5rem 3.5rem;
+            text-transform: uppercase;
+            font-family: $font-alternates;
+            font-weight: bold;
+            font-size: 3rem;
+            color: $color-white;
+        }
+        &-detail {
+            width: 500px;
+            max-width: 100%;
+            @include border-rounded-gradient();
+            padding: 1.5rem 3rem;
+            .detail-name {
+                font-family: $font-alternates;
+                font-weight: 800;
+                font-size: 1.5rem;
+                color: $color-white;
+            }
+            .detail-date {
+                margin: 0;
+                font-family: $font-alternates;
+                font-weight: 600;
+                font-size: 1.35rem;
+                color: $color-white;
+            }
+        }
+    }
+}
+// End of Date and Venue
+
+// Register
+#eventRegister {
+    @include arrow-title();
+    .register {
+        min-height: 50vh;
+        &-button {
+            width: 400px;
+            max-width: 100%;
+        }
+    }
+}
+// End of Register
+
+@media screen and (max-width: 576px) {
+    // Header
+    #eventHeader {
+        .header {
+            &-title {
+                font-size: 4.5rem;
+            }
+            &-subtitle {
+                font-size: 1rem;
+            }
+        }
+    }
+    // End of Header
+
+    // About
+    #eventAbout {
+        .about {
+            margin: 5rem 2rem;
+            &-content {
+                font-size: 1rem;
+                line-height: 1.5rem;
+                padding: 2rem;
+            }
+            &-button {
+                padding: 1rem 0;
+                font-size: 1.25rem;
+            }
+            &-icon {
+                width: 50px;
+            }
+        }
+    }
+    // End of About
+
+    // Topic
+    #eventTopic {
+        .topic {
+            &-content {
+                .topic-name {
+                    font-size: 1.25rem;
+                }
+                .topic-desc {
+                    text-align: justify;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    // End of Topic
+
+    // Timeline
+    #eventTimeline {
+        .timeline {
+            .gradientbox-title {
+                font-size: 1.75rem;
+                padding: 1.25rem 0;
+            }
+            &-content {
+                max-width: 300px;
+                .line {
+                    position: absolute;
+                    content: "";
+                    width: 2px;
+                    height: 90%;
+                    top: 0;
+                    right: 63px;
+                    background-color: $color-white;
+                }
+                .timeline-desc {
+                    font-size: 1.25rem;
+                }
+                .timeline-schedule {
+                    width: 90px;
+                    height: 90px;
+                    .schedule-content {
+                        span {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // End of Timeline
+
+    // Information
+    #eventInfo {
+        .info {
+            &-container {
+                padding: 1.5rem;
+                .info-content {
+                    padding: 2rem 1.75rem 2rem 1rem;
+                    border: 2px solid $color-white;
+                    .info-title {
+                        font-family: $font-alternates;
+                        font-weight: bold;
+                        font-size: 1.25rem;
+                        color: $color-white;
+                        text-transform: uppercase;
+                    }
+                    .info-desc {
+                        font-family: $font-alternates;
+                        font-weight: 500;
+                        color: $color-white;
+                        li {
+                            margin: 0.25rem 0;
+                            text-align: justify;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // End of Information
+
+    // Date and Venue
+    #eventSchedule {
+        .schedule {
+            &-title {
+                font-size: 1.5rem;
+            }
+            &-detail {
+                padding: 1rem 2rem;
+                .detail-name {
+                    font-size: 1.25rem;
+                }
+                .detail-date {
+                    font-size: 1rem;
+                }
+            }
+            &-icon {
+                width: 70px;
+            }
+        }
+    }
+    // End of Date and Venue
+}

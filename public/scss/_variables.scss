@@ -1,0 +1,26 @@
+// Variables
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: "Mova";
+  src: url("../font/Mova.woff") format("woff"),
+    /* Modern Browsers */ url("../font/Mova.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+$font-mova: "Mova";
+$font-poppins: "Poppins", sans-serif;
+$font-alternates: "Montserrat Alternates", sans-serif;
+
+$color-black: #050709;
+$color-darkblue: #000c30;
+$color-blue: #1e265c;
+$color-lightblue: #0d9efb;
+$color-navy: #3e5ca9;
+$color-purple: #4e489c;
+$color-darkred: #7d1417;
+$color-red: #ed2b24;
+$color-pink: #fc607e;
+$color-lightpink: #d17fe5;
+$color-softpink: #ffdee3;
+$color-grey: #9c9ea1;
+$color-lightgrey: #bfbfbf;
+$color-white: #ffffff;

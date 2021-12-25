@@ -1,0 +1,92 @@
+#eventForm {
+    .form {
+        &-name {
+            min-height: calc(95vh - 100px);
+        }
+        &-title {
+            font-family: $font-mova;
+            font-size: 4rem;
+            color: $color-white;
+            text-shadow: 0px 0px 7px $color-white;
+        }
+        &-subtitle {
+            width: 430px;
+            max-width: 100%;
+            padding: 1.5rem 2.25rem;
+            font-family: Montserrat Alternates;
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: $color-white;
+            @include border-gradient();
+            box-shadow: 0px 0px 10px $color-white;
+        }
+        &-container {
+            position: relative;
+            background: linear-gradient(180deg, #1e265c 0%, #000c30 100%);
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 15px;
+            padding: 2.5rem 1.75rem;
+            .form-bgicon {
+                position: absolute;
+                top: -50px;
+                right: -50px;
+                z-index: -1;
+            }
+            .form-head {
+                font-family: $font-alternates;
+                font-weight: 800;
+                font-size: 1.75rem;
+                color: $color-white;
+                text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+            }
+            .form-label,
+            .form-check-label {
+                font-family: $font-poppins;
+                font-weight: 500;
+                font-size: 1rem;
+                color: $color-white;
+            }
+            .form-control,
+            .form-select {
+                border: 1px solid #ffffff;
+                color: $color-white;
+                background-color: transparent;
+                box-sizing: border-box;
+                filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.4));
+                border-radius: 9px;
+                option {
+                    color: $color-darkblue;
+                }
+            }
+            .form-link {
+                font-family: $font-alternates;
+                font-weight: 500;
+                font-size: 1rem;
+                text-decoration-line: underline;
+                color: $color-white;
+            }
+            .form-desc,
+            li.form-list {
+                font-family: $font-poppins;
+                font-weight: 500;
+                font-size: 1rem;
+                color: $color-white;
+            }
+            .form-submit {
+                @include border-gradient();
+                background-color: transparent;
+                width: fit-content;
+                padding: 0.75rem 2.5rem;
+                font-family: $font-alternates;
+                font-weight: 800;
+                font-size: 1.15rem;
+                color: $color-white;
+                transition: ease-in-out 0.3s;
+                &:hover {
+                    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+                    box-shadow: 0px 0px 10px $color-white;
+                }
+            }
+        }
+    }
+}

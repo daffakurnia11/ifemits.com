@@ -178,7 +178,10 @@ return [
         'age'               => 'Usia',
         'promotion'         => 'Media Promosi',
         'share'             => 'Bukti share',
-        'amount'            => 'Jumlah produk'
+        'amount'            => 'Jumlah produk',
+        // Admin
+        'original'          => 'URL asli',
+        'short'             => 'Short link'
     ],
 
 ];

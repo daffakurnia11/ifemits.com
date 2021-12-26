@@ -2,9 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @font-face {
-  font-family: "Mova";
-  src: url("../font/Mova.woff") format("woff"),
-    /* Modern Browsers */ url("../font/Mova.ttf") format("truetype"); /* Safari, Android, iOS */
+    font-family: "Mova";
+    src: url("../fonts/Mova.woff") format("woff"),
+        /* Modern Browsers */ url("../fonts/Mova.ttf") format("truetype"); /* Safari, Android, iOS */
 }
 $font-mova: "Mova";
 $font-poppins: "Poppins", sans-serif;

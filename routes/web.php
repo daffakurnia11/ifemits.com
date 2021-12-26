@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CompetitionController;
 use App\Http\Controllers\Admin\Exh_exhibitorController;
 use App\Http\Controllers\Admin\Exh_guestController;
 use App\Http\Controllers\Admin\Exh_sellerController;
+use App\Http\Controllers\Admin\ShortlinkController;
 use App\Http\Controllers\Admin\WebinarController;
 use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
@@ -53,4 +55,20 @@ Route::prefix('food-and-beverage')->group(function () {
   Route::get('/', [PagesController::class, 'fnb_info']);
   Route::get('/registrasi', [PagesController::class, 'fnb_regis']);
   Route::post('/registrasi', [Exh_sellerController::class, 'store']);
+});
+
+// Admin Routing
+Route::get('/login', [AdminController::class, 'login'])->middleware('guest')->name('login');
+Route::post('/login', [AdminController::class, 'authentication']);
+Route::post('/logout', [AdminController::class, 'logout']);
+
+Route::prefix('admin')->middleware('auth')->group(function () {
+  Route::get('/', [AdminController::class, 'index']);
+  Route::resource('shortlink', ShortlinkController::class);
+});
+
+// FOR SHORT LINKS
+Route::get('/{shortlink:short}', [ShortlinkController::class, 'show']);
+Route::fallback(function () {
+  return view('errors.404');
 });

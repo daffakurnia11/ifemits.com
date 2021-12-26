@@ -33,6 +33,7 @@
   <script src="/vendor/jquery/dist/jquery.js"></script>
   <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
   <script src="/vendor/aos/dist/aos.js"></script>
+  <script src="/vendor/sweetalert2/dist/sweetalert2.all.min.js"></script>
   <script src="/js/script.js"></script>
   <script src="/js/particle.js"></script>
   <script>

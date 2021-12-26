@@ -22,10 +22,12 @@ class PagesController extends Controller
     }
     public function webinar_regis()
     {
-        return view('errors.comingsoon', [
+        // return view('errors.comingsoon', [
+        //     'title' => 'Registrasi Webinar'
+        // ]);
+        return view('main.webinar.regis', [
             'title' => 'Registrasi Webinar'
         ]);
-        // return view('main.webinar.regis');
     }
 
     // MSM

@@ -154,7 +154,7 @@
         <p class="text-center prize-desc m-0">Rp 1.000.000</p>
       </div>
       <div class="prize-content mx-auto" data-aos="fade-down" data-aos-offset="0" data-aos-delay="1250">
-        <h3 class="text-center prize-name">Harapan 1</h3>
+        <h3 class="text-center prize-name">Harapan 2</h3>
         <p class="text-center prize-desc m-0">Rp 1.000.000</p>
       </div>
     </div>

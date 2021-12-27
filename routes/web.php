@@ -75,5 +75,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 // FOR SHORT LINKS
 Route::get('/{shortlink:short}', [ShortlinkController::class, 'show']);
 Route::fallback(function () {
-  return view('errors.404');
+  return view('errors.404', [
+    'title' => '404 Not Found'
+  ]);
 });

@@ -44,3 +44,9 @@ Route::prefix('food-and-beverage')->group(function () {
   Route::get('/', [PagesController::class, 'fnb_info']);
   Route::get('/registrasi', [PagesController::class, 'fnb_regis']);
 });
+
+Route::fallback(function () {
+  return view('errors.404', [
+    'title' => '404 Not Found'
+  ]);
+});

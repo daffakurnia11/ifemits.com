@@ -15,7 +15,10 @@ class Exh_exhibitorController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.exhibitor.index', [
+            'title'     => 'Data Pendaftar Exhibitor',
+            'datas'     => Exh_exhibitor::latest()->get()
+        ]);
     }
 
     /**
@@ -92,30 +95,10 @@ class Exh_exhibitorController extends Controller
      */
     public function show(Exh_exhibitor $exh_exhibitor)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Exh_exhibitor  $exh_exhibitor
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Exh_exhibitor $exh_exhibitor)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Exh_exhibitor  $exh_exhibitor
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Exh_exhibitor $exh_exhibitor)
-    {
-        //
+        return view('admin.exhibitor.show', [
+            'title'         => 'Data Pendaftar ' . $exh_exhibitor->register_code,
+            'exhibitor'     => $exh_exhibitor
+        ]);
     }
 
     /**
@@ -126,6 +109,14 @@ class Exh_exhibitorController extends Controller
      */
     public function destroy(Exh_exhibitor $exh_exhibitor)
     {
-        //
+        $images = explode(';', $exh_exhibitor->photo);
+
+        foreach ($images as $image) {
+            unlink(public_path('files/pameran/exhibitor/photo/' . $image));
+        }
+        unlink(public_path('files/pameran/exhibitor/payment/' . $exh_exhibitor->payment));
+
+        $exh_exhibitor->delete();
+        return redirect('/admin/exhibitor')->with('notif', "Data deleted");
     }
 }

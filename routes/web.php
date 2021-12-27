@@ -65,6 +65,11 @@ Route::post('/logout', [AdminController::class, 'logout']);
 Route::prefix('admin')->middleware('auth')->group(function () {
   Route::get('/', [AdminController::class, 'index']);
   Route::resource('shortlink', ShortlinkController::class);
+  Route::resource('webinar', WebinarController::class)->except(['create', 'store']);
+  Route::resource('msm', CompetitionController::class)->parameter('msm', 'competition')->except(['create', 'store', 'edit', 'update']);
+  Route::resource('pengunjung', Exh_guestController::class)->parameter('pengunjung', 'exh_guest')->except(['create', 'store', 'edit', 'update', 'show']);
+  Route::resource('exhibitor', Exh_exhibitorController::class)->parameter('exhibitor', 'exh_exhibitor')->except(['create', 'store', 'edit', 'update']);
+  Route::resource('food-and-beverage', Exh_sellerController::class)->parameter('food-and-beverage', 'exh_seller')->except(['create', 'store', 'edit', 'update']);
 });
 
 // FOR SHORT LINKS

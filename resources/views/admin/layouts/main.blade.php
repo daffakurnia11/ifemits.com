@@ -20,6 +20,8 @@
   <link href="/css/admin/icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  {{-- Swiper js --}}
+  <link rel="stylesheet" href="/vendor/swiper/swiper-bundle.min.css">
 
   <!--Theme Styles-->
   <link href="/css/admin/dark-theme.css" rel="stylesheet" />
@@ -66,16 +68,19 @@
   {{-- Data Tables --}}
   <script src="/vendor/datatable/js/jquery.dataTables.min.js"></script>
   <script src="/vendor/datatable/js/dataTables.bootstrap5.min.js"></script>
-  <script src="/js/table-datatable.js"></script>
+  <script src="/js/table-datatable.js?modify={{ date('Ymd') }}"></script>
   {{-- Datepicker --}}
 	<script src="/vendor/bootstrap-material-datetimepicker/js/moment.min.js"></script>
 	<script src="/vendor/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.min.js"></script>
   {{-- Notification js --}}
 	<script src="/vendor/notifications/js/lobibox.min.js"></script>
 	<script src="/vendor/notifications/js/notifications.min.js"></script>
+  {{-- Swiper js --}}
+  <script src="/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/js/swiper.js?modify={{ date('Ymd') }}"></script>
   <!--app-->
   <script src="/js/script.js?modify={{ date("Ymd")}}"></script>
-  <script src="/js/app.js"></script>
+  <script src="/js/app.js?modify={{ date('Ymd') }}"></script>
 
 </body>
 

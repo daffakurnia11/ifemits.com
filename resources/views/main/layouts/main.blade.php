@@ -11,7 +11,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/vendor/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css?modify={{ date('Ymd') }}">
   <!-- AOS -->
   <link rel="stylesheet" href="/vendor/aos/dist/aos.css" />
 
@@ -34,8 +34,8 @@
   <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
   <script src="/vendor/aos/dist/aos.js"></script>
   <script src="/vendor/sweetalert2/dist/sweetalert2.all.min.js"></script>
-  <script src="/js/script.js"></script>
-  <script src="/js/particle.js"></script>
+  <script src="/js/script.js?modify={{ date('Ymd') }}"></script>
+  <script src="/js/particle.js?modify={{ date('Ymd') }}"></script>
   <script>
     AOS.init({
       once: true,

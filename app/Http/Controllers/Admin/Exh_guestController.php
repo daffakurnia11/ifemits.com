@@ -15,7 +15,10 @@ class Exh_guestController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.guest.index', [
+            'title'     => 'Data Pengunjung',
+            'datas'     => Exh_guest::latest()->get()
+        ]);
     }
 
     /**
@@ -68,40 +71,6 @@ class Exh_guestController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Exh_guest  $exh_guest
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Exh_guest $exh_guest)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Exh_guest  $exh_guest
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Exh_guest $exh_guest)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Exh_guest  $exh_guest
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Exh_guest $exh_guest)
-    {
-        //
-    }
-
-    /**
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Exh_guest  $exh_guest
@@ -109,6 +78,9 @@ class Exh_guestController extends Controller
      */
     public function destroy(Exh_guest $exh_guest)
     {
-        //
+        unlink(public_path('files/pameran/guest/payment/' . $exh_guest->payment));
+
+        $exh_guest->delete();
+        return redirect('/admin/food-and-beverage')->with('notif', "Data deleted");
     }
 }

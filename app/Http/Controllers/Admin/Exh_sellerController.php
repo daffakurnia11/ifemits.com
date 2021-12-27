@@ -15,7 +15,10 @@ class Exh_sellerController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.seller.index', [
+            'title'     => 'Data Pendaftar Food & Beverage',
+            'datas'     => Exh_seller::latest()->get()
+        ]);
     }
 
     /**
@@ -105,30 +108,10 @@ class Exh_sellerController extends Controller
      */
     public function show(Exh_seller $exh_seller)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Exh_seller  $exh_seller
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Exh_seller $exh_seller)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Exh_seller  $exh_seller
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Exh_seller $exh_seller)
-    {
-        //
+        return view('admin.seller.show', [
+            'title'         => 'Data Pendaftar ' . $exh_seller->register_code,
+            'seller'        => $exh_seller
+        ]);
     }
 
     /**
@@ -139,6 +122,18 @@ class Exh_sellerController extends Controller
      */
     public function destroy(Exh_seller $exh_seller)
     {
-        //
+        $menus = explode(';', $exh_seller->menu);
+        $images = explode(';', $exh_seller->photo);
+
+        foreach ($menus as $menu) {
+            unlink(public_path('files/pameran/seller/menu/' . $menu));
+        }
+        foreach ($images as $image) {
+            unlink(public_path('files/pameran/seller/photo/' . $image));
+        }
+        unlink(public_path('files/pameran/seller/payment/' . $exh_seller->payment));
+
+        $exh_seller->delete();
+        return redirect('/admin/food-and-beverage')->with('notif', "Data deleted");
     }
 }

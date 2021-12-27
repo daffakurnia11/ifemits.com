@@ -53,25 +53,25 @@
         <div class="menu-title">MSM</div>
       </a>
     </li>
-    <li class="{{ Request::is('admin/pameran') ? 'mm-active' : '' }}">
+    <li class="{{ (Request::is('admin/pengunjung') || Request::is('admin/exhibitor') || Request::is('admin/food-and-beverage')) ? 'mm-active' : '' }}">
       <a class="has-arrow" href="#" aria-expanded="true">
         <div class="parent-icon"><i class="bi bi-shop-window"></i>
         </div>
         <div class="menu-title">Pameran</div>
       </a>
-      <ul class="mm-collapse {{ Request::is('admin/pameran**') ? 'mm-show' : '' }}" style="">
-        <li> 
-          <a href=""><i class="bi bi-arrow-right-short"></i>
+      <ul class="mm-collapse {{ (Request::is('admin/pengunjung') || Request::is('admin/exhibitor') || Request::is('admin/food-and-beverage')) ? 'mm-show' : '' }}" style="">
+        <li class="{{ Request::is('admin/pengunjung') ? 'mm-active' : '' }}"> 
+          <a href="/admin/pengunjung"><i class="bi bi-arrow-right-short"></i>
             Pengunjung
           </a>
         </li>
-        <li> 
-          <a href=""><i class="bi bi-arrow-right-short"></i>
+        <li class="{{ Request::is('admin/exhibitor') ? 'mm-active' : '' }}"> 
+          <a href="/admin/exhibitor"><i class="bi bi-arrow-right-short"></i>
             Exhibitor
           </a>
         </li>
-        <li> 
-          <a href=""><i class="bi bi-arrow-right-short"></i>
+        <li class="{{ Request::is('admin/food-and-beverage') ? 'mm-active' : '' }}"> 
+          <a href="/admin/food-and-beverage"><i class="bi bi-arrow-right-short"></i>
             Food & Beverage
           </a>
         </li>

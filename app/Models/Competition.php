@@ -19,4 +19,9 @@ class Competition extends Model
         'recommendation',
         'payment'
     ];
+
+    public function getRouteKeyName()
+    {
+        return 'register_code';
+    }
 }

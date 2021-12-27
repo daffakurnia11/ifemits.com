@@ -56,4 +56,13 @@ if (notif) {
       msg: 'Short link berhasil dihapus!'
     });
   }
+  if (notif == "Data deleted") {
+    Lobibox.notify('success', {
+      pauseDelayOnHover: true,
+      continueDelayOnInactiveTab: false,
+      position: 'top right',
+      icon: 'bx bx-check-circle',
+      msg: 'Data berhasil dihapus!'
+    });
+  }
 }

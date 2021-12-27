@@ -15,7 +15,10 @@ class CompetitionController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.msm.index', [
+            'title'     => 'Data Pendaftar MSM',
+            'datas'     => Competition::latest()->get()
+        ]);
     }
 
     /**
@@ -129,30 +132,10 @@ class CompetitionController extends Controller
      */
     public function show(Competition $competition)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Competition  $competition
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Competition $competition)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Competition  $competition
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Competition $competition)
-    {
-        //
+        return view('admin.msm.show', [
+            'title'         => 'Data Pendaftar ' . $competition->register_code,
+            'competition'   => $competition
+        ]);
     }
 
     /**
@@ -163,6 +146,26 @@ class CompetitionController extends Controller
      */
     public function destroy(Competition $competition)
     {
-        //
+        $datas = explode(';', $competition->data);
+        $letters = explode(';', $competition->letter);
+        $scans = explode(';', $competition->recommendation);
+        $images = explode(';', $competition->twibbon);
+
+        foreach ($scans as $scan) {
+            unlink(public_path('files/competition/recommendation/' . $scan));
+        }
+        foreach ($datas as $data) {
+            unlink(public_path('files/competition/data/' . $data));
+        }
+        foreach ($letters as $letter) {
+            unlink(public_path('files/competition/letter/' . $letter));
+        }
+        foreach ($images as $image) {
+            unlink(public_path('files/competition/twibbon/' . $image));
+        }
+        unlink(public_path('files/competition/payment/' . $competition->payment));
+
+        $competition->delete();
+        return redirect('/admin/msm')->with('notif', "Data deleted");
     }
 }

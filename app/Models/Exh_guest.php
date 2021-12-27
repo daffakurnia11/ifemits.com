@@ -17,4 +17,9 @@ class Exh_guest extends Model
         'phone',
         'payment',
     ];
+
+    public function getRouteKeyName()
+    {
+        return 'register_code';
+    }
 }

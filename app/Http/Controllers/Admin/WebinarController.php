@@ -15,7 +15,10 @@ class WebinarController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.webinar.index', [
+            'title'     => 'Data Pendaftar Webinar',
+            'datas'     => Webinar::latest()->get()
+        ]);
     }
 
     /**
@@ -69,7 +72,7 @@ class WebinarController extends Controller
                 $shareName[] = $filename;
             }
             $validated['share'] = implode(';', $shareName);
-            $validated['promotion'] = implode(',', $request->promotion);
+            $validated['promotion'] = implode(', ', $request->promotion);
 
             Webinar::create($validated);
             return redirect('/webinar/registrasi')->with('message', 'Registration Success');
@@ -86,30 +89,10 @@ class WebinarController extends Controller
      */
     public function show(Webinar $webinar)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Webinar  $webinar
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Webinar $webinar)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Webinar  $webinar
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Webinar $webinar)
-    {
-        //
+        return view('admin.webinar.show', [
+            'title'     => 'Data Pendaftar ' . $webinar->register_code,
+            'webinar'   => $webinar
+        ]);
     }
 
     /**
@@ -120,6 +103,13 @@ class WebinarController extends Controller
      */
     public function destroy(Webinar $webinar)
     {
-        //
+        $images = explode(';', $webinar->share);
+
+        foreach ($images as $image) {
+            unlink(public_path('files/webinar/share/' . $image));
+        }
+
+        $webinar->delete();
+        return redirect('/admin/webinar')->with('notif', "Data deleted");
     }
 }

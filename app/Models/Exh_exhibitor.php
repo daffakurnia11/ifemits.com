@@ -21,4 +21,9 @@ class Exh_exhibitor extends Model
         'photo',
         'payment'
     ];
+
+    public function getRouteKeyName()
+    {
+        return 'register_code';
+    }
 }

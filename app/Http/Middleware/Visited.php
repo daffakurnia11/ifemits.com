@@ -18,7 +18,7 @@ class Visited
      */
     public function handle(Request $request, Closure $next)
     {
-        $ip = hash('sha512', $request->ip());
+        $ip = $request->ip();
         if (Visitor::whereDate('created_at', Carbon::today())->where('ip', $ip)->count() < 1) {
             Visitor::create([
                 'ip' => $ip,

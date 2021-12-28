@@ -22,6 +22,10 @@
   <!--start wrapper-->
   <div class="wrapper">
 
+    @if (session()->has('message'))
+      <div id="flash-data" data-flashdata="{{ session('message') }}"></div>
+    @endif
+
     <!--start content-->
     <main class="authentication-content">
       <div class="container-fluid">
@@ -72,6 +76,8 @@
 
   <!--plugins-->
   <script src="/vendor/jquery/dist/jquery.js"></script>
+  <script src="/vendor/sweetalert2/dist/sweetalert2.all.min.js"></script>
+  <script src="/js/script.js?modify={{ date('Ymd') }}"></script>
 
 
 </body>

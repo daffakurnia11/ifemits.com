@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="light-theme">
+<html lang="en" class="semi-dark color-header headercolor2">
 
 <head>
   <!-- Required meta tags -->
@@ -78,6 +78,8 @@
   {{-- Swiper js --}}
   <script src="/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="/js/swiper.js?modify={{ date('Ymd') }}"></script>
+  {{-- Apex js --}}
+  <script src="/vendor/apexcharts-bundle/js/apexcharts.min.js"></script>
   <!--app-->
   <script src="/js/script.js?modify={{ date("Ymd")}}"></script>
   <script src="/js/app.js?modify={{ date('Ymd') }}"></script>

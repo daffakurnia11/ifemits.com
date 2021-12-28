@@ -17,6 +17,7 @@ class WebinarController extends Controller
     {
         return view('admin.webinar.index', [
             'title'     => 'Data Pendaftar Webinar',
+            // 'datas'     => Webinar::whereRaw('MONTH(created_at) = 11')->get()
             'datas'     => Webinar::latest()->get()
         ]);
     }

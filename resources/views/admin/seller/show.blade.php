@@ -8,7 +8,7 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb mb-0 p-0">
           <li class="breadcrumb-item"><a href="/admin"><i class="bx bx-home-alt"></i> Dashboard</a>
-          <li class="breadcrumb-item"><a href="/admin/food-and-beverage"><i class="bi bi-easel"></i> Pendaftar Food & Beverage</a>
+          <li class="breadcrumb-item"><a href="/admin/food-and-beverage"><i class="bi bi-shop"></i> Pendaftar Food & Beverage</a>
           </li>
           <li class="breadcrumb-item active" aria-current="page">{{ $seller->register_code }}</li>
         </ol>

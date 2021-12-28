@@ -542,6 +542,7 @@ class ComposerStaticInit1cc12301155f60eb94c65b5f11d5f826
         'App\\Models\\Exh_seller' => __DIR__ . '/../..' . '/app/Models/Exh_seller.php',
         'App\\Models\\Shortlink' => __DIR__ . '/../..' . '/app/Models/Shortlink.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Models\\Visitor' => __DIR__ . '/../..' . '/app/Models/Visitor.php',
         'App\\Models\\Webinar' => __DIR__ . '/../..' . '/app/Models/Webinar.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',

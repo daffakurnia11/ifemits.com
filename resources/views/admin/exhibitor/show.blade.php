@@ -8,7 +8,7 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb mb-0 p-0">
           <li class="breadcrumb-item"><a href="/admin"><i class="bx bx-home-alt"></i> Dashboard</a>
-          <li class="breadcrumb-item"><a href="/admin/exhibitor"><i class="bi bi-easel"></i> Pendaftar Exhibitor</a>
+          <li class="breadcrumb-item"><a href="/admin/exhibitor"><i class="bi bi-cast"></i> Pendaftar Exhibitor</a>
           </li>
           <li class="breadcrumb-item active" aria-current="page">{{ $exhibitor->register_code }}</li>
         </ol>

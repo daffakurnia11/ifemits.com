@@ -83,9 +83,9 @@
                   @endphp
                   <!-- Slides -->
                   @foreach ($images as $image)
-                  <div class="swiper-slide mb-5">
+                  <div class="swiper-slide mb-5 text-center">
                     <a href="/files/webinar/share/{{ $image }}" target="_blank">
-                      <img src="/files/webinar/share/{{ $image }}" class="w-100" alt="">
+                      <img src="/files/webinar/share/{{ $image }}" class="w-75" alt="">
                     </a>
                   </div>
                   @endforeach

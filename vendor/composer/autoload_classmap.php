@@ -32,6 +32,7 @@ return array(
     'App\\Models\\Exh_seller' => $baseDir . '/app/Models/Exh_seller.php',
     'App\\Models\\Shortlink' => $baseDir . '/app/Models/Shortlink.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
+    'App\\Models\\Visitor' => $baseDir . '/app/Models/Visitor.php',
     'App\\Models\\Webinar' => $baseDir . '/app/Models/Webinar.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',

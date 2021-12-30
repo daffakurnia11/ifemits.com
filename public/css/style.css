@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @font-face {
   font-family: "Mova";
-  src: url("../font/Mova.woff") format("woff"), url("../font/Mova.ttf") format("truetype");
+  src: url("../fonts/Mova.woff") format("woff"), url("../fonts/Mova.ttf") format("truetype");
   /* Safari, Android, iOS */
 }
 
@@ -546,6 +546,364 @@ canvas {
   }
   #footer .footer-logo.fa-3x {
     font-size: 2em;
+  }
+}
+
+#aboutHeader {
+  position: relative;
+  min-height: calc(90vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 0 5rem;
+}
+
+#aboutHeader .header {
+  position: relative;
+}
+
+#aboutHeader .header-image {
+  width: 400px;
+  max-width: 100%;
+}
+
+#aboutHeader .header-car {
+  width: 300px;
+  max-width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateY(50%);
+  z-index: 2;
+}
+
+#aboutHeader .header-title {
+  width: fit-content;
+}
+
+#aboutHeader .header-title span {
+  font-family: "Mova";
+  font-size: 6rem;
+  line-height: 6rem;
+  color: #ffffff;
+  text-shadow: 0px 0px 10px #ffffff;
+}
+
+#aboutHeader .header-play:nth-of-type(1) {
+  transform: rotate(-125.84deg);
+  z-index: -1;
+  width: 65px;
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+}
+
+#aboutHeader .header-play:nth-of-type(2) {
+  transform: rotate(163.22deg);
+  z-index: -1;
+  width: 80px;
+  position: absolute;
+  top: 5rem;
+  right: 3rem;
+}
+
+#aboutHeader .header-play:nth-of-type(3) {
+  transform: rotate(-125.84deg);
+  z-index: -1;
+  width: 65px;
+  position: absolute;
+  bottom: 1rem;
+  right: 25%;
+}
+
+.team {
+  margin: 3rem auto;
+}
+
+.team .arrow-title {
+  margin-top: 3rem;
+}
+
+.team .arrow-title-text {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 992px) {
+  .team .arrow-title-left, .team .arrow-title-right {
+    width: 170px;
+  }
+  .team .arrow-title-text {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .team .arrow-title-left, .team .arrow-title-right {
+    width: 90px;
+  }
+  .team .arrow-title-text {
+    font-size: 1.5rem;
+  }
+}
+
+.team-division {
+  width: fit-content;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: bold;
+  font-size: 1.75rem;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.team-division::after {
+  margin: 0.5rem auto;
+  content: "";
+  display: block;
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(to right, #0d9efb, #9309ff);
+}
+
+.team-container {
+  position: relative;
+  width: 250px;
+  max-width: 100%;
+}
+
+.team-container .team-bg {
+  max-width: 250px;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  z-index: -1;
+  transition: ease-in-out 0.3s;
+}
+
+.team-container .team-bg.hovered {
+  filter: drop-shadow(0 0 8px #ffffff);
+}
+
+.team-container .team-photo {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.team-container .team-desc {
+  background: linear-gradient(86.72deg, #0d9efb 0%, #9309ff 52.6%, #d17fe5 100%);
+  border-radius: 15px;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: ease-in-out 0.3s;
+}
+
+.team-container .team-desc.hovered {
+  filter: drop-shadow(0 0 4px #ffffff);
+}
+
+.team-container .team-desc .team-name {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.15rem;
+  color: #ffffff;
+}
+
+.team-container .team-desc .team-position {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 0.8rem;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+#aboutCrews .crews .carousel-control-prev,
+#aboutCrews .crews .carousel-control-next {
+  width: unset;
+  opacity: 1;
+}
+
+#aboutLogo {
+  padding: 3rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+#aboutLogo .logo-title {
+  display: flex;
+  align-items: center;
+}
+
+#aboutLogo .logo-title-image {
+  width: 70px;
+  display: inline-block;
+  margin-left: 2rem;
+  margin-right: 2.75rem;
+}
+
+#aboutLogo .logo-title-text {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+#aboutLogo .logo-circle {
+  background: linear-gradient(140deg, #000c30, #000c30) padding-box, linear-gradient(140deg, #3e5ca9 30%, #fc607e) border-box;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  width: 350px;
+  max-width: 100%;
+  height: 350px;
+}
+
+#aboutLogo .logo-circle .logo-picture {
+  width: 220px;
+  max-width: 100%;
+}
+
+#aboutLogo .logo-container {
+  background: linear-gradient(140deg, #000c30, #000c30) padding-box, linear-gradient(140deg, #3e5ca9 30%, #fc607e) border-box;
+  border-radius: 1.25rem;
+  border: 3px solid transparent;
+  width: 500px;
+  max-width: 100%;
+  height: 315px;
+  padding: 2.5rem 2.5rem 4rem;
+  position: relative;
+}
+
+#aboutLogo .logo-container .logo-meaning {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: bold;
+  font-size: 2.25rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto 2rem;
+}
+
+#aboutLogo .logo-container .logo-meaning::after {
+  margin: 0.5rem auto;
+  content: "";
+  display: block;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(to right, #0d9efb, #9309ff);
+}
+
+#aboutLogo .logo-container .logo-desc {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+#aboutLogo .logo-container .logo-play {
+  position: absolute;
+  z-index: 2;
+  bottom: -2rem;
+  left: -1.5rem;
+}
+
+#aboutLogo .logo-container .logo-next {
+  position: absolute;
+  z-index: 2;
+  bottom: 1rem;
+  right: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+}
+
+#aboutLogo .logo-container .logo-next::after {
+  margin: auto;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #0d9efb, #9309ff);
+}
+
+#aboutLogo .logo-hexa {
+  width: 250px;
+  position: absolute;
+  z-index: -1;
+  bottom: -2rem;
+  right: 25%;
+}
+
+#aboutLogo .logo-bg1 {
+  position: absolute;
+  top: 0;
+  right: -1rem;
+  z-index: -1;
+}
+
+#aboutLogo .logo-bg2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@media screen and (max-width: 576px) {
+  #aboutHeader .header-image {
+    width: 250px;
+  }
+  #aboutHeader .header-car {
+    width: 175px;
+  }
+  #aboutHeader .header-title span {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  .team .team-container .team-photo {
+    width: 80%;
+  }
+  #aboutLogo .logo-title-image {
+    width: 40px;
+    margin-left: 0.7rem;
+    margin-right: 1rem;
+  }
+  #aboutLogo .logo-title-text {
+    font-size: 2rem;
+  }
+  #aboutLogo .logo-circle {
+    width: 225px;
+    height: 225px;
+  }
+  #aboutLogo .logo-circle .logo-picture {
+    width: 110px;
+  }
+  #aboutLogo .logo-container {
+    height: 250px;
+  }
+  #aboutLogo .logo-container .logo-meaning {
+    font-size: 1.75rem;
+  }
+  #aboutLogo .logo-container .logo-desc {
+    font-size: 1rem;
+  }
+  #aboutLogo .logo-container .logo-play {
+    width: 75px;
+  }
+  #aboutLogo .logo-hexa {
+    width: 250px;
+    position: absolute;
+    z-index: -1;
+    bottom: -2rem;
+    right: 0;
   }
 }
 
@@ -1215,6 +1573,10 @@ canvas {
   max-width: 100%;
 }
 
+#eventRegister .register-button img {
+  width: 45px;
+}
+
 @media screen and (max-width: 576px) {
   #eventHeader .header-title {
     font-size: 4.5rem;
@@ -1363,6 +1725,15 @@ canvas {
   font-weight: 500;
   font-size: 1rem;
   color: #ffffff;
+}
+
+#eventForm .form-container .input-group-text {
+  border-radius: 9px 0 0 9px;
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.4));
+}
+
+#eventForm .form-container .input-group .form-control {
+  border-radius: 0 9px 9px 0;
 }
 
 #eventForm .form-container .form-control,

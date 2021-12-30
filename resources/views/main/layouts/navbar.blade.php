@@ -29,8 +29,8 @@
         <li class="nav-item mx-auto mx-lg-4 my-2 text-center">
           <a class="nav-link px-0" href="/coming-soon">Merch</a>
         </li>
-        <li class="nav-item mx-auto mx-lg-4 my-2 text-center">
-          <a class="nav-link px-0" href="/coming-soon">About Us</a>
+        <li class="nav-item mx-auto mx-lg-4 my-2 text-center {{ Request::is('about') ? 'active' : '' }}">
+          <a class="nav-link px-0" href="/about">About Us</a>
         </li>
       </ul>
     </div>

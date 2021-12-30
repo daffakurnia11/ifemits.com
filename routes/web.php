@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PagesController::class, 'index']);
+Route::get('/about', [PagesController::class, 'about']);
 Route::get('/coming-soon', function () {
   return view('errors.comingsoon');
 });
@@ -46,7 +47,5 @@ Route::prefix('food-and-beverage')->group(function () {
 });
 
 Route::fallback(function () {
-  return view('errors.404', [
-    'title' => '404 Not Found'
-  ]);
+  return view('errors.404');
 });

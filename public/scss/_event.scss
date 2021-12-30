@@ -489,6 +489,9 @@
     .register {
         min-height: 50vh;
         &-button {
+            img {
+                width: 45px;
+            }
             width: 400px;
             max-width: 100%;
         }

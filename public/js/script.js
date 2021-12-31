@@ -5,6 +5,38 @@ $(function () {
   $('#scrollToTop').on('click', function () {
     $(window).scrollTop(0);
   })
+
+  $('.team-container').hover(function () {
+    $(this).children('.team-bg').addClass('hovered');
+    $(this).find('.team-desc').addClass('hovered');
+  }, function () {
+    $(this).children('.team-bg').removeClass('hovered');
+    $(this).find('.team-desc').removeClass('hovered');
+  });
+
+  const meaning = ['Adaptif', 'Bentuk Isometri', 'Gear', '6 Gerigi', 'Lubang di tengah'];
+  const desc = [
+    'Mudah menyesuaikan (diri) dengan keadaan',
+    'Menggambarkan kesolidan, kesetaraan, dan kesatuan dalam KMM',
+    'Teknologi yang berkesinambungan. Menggambarkan sisi mechanical dari Big Event IFEM Teknik Mesin FT-IRS ITS',
+    '6 organisasi mahasiswa di Teknik Mesin FT-IRS ITS',
+    'keberlangsungan IFEM yang tetap pada tujuannya dan tidak melenceng'
+  ];
+  let logoIndex = 1;
+
+  $('.logo-next').on('click', function () {
+    if (logoIndex < 5) {
+      $('#logoMeaning').html(meaning[logoIndex]);
+      $('#logoDesc').html(desc[logoIndex]);
+      logoIndex++;
+    } else {
+      logoIndex = 0;
+      $('#logoMeaning').html(meaning[logoIndex]);
+      $('#logoDesc').html(desc[logoIndex]);
+      logoIndex++;
+    }
+  });
+
   // chart 3
   var options = {
     series: [],

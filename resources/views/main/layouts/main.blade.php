@@ -6,12 +6,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#000c30" />
+  <link rel="canonical" href="https://ifemits.com">
+  <meta name="canonical" href="https://ifemits.com" />
+  <meta name="description" content="IFEM atau bisa dikenal dengan Indonesian Future Vehicle Marathon merupakan kegiatan yang diselenggarakan oleh Departemen Teknik Mesin FT-IRS ITS dibawah Himpunan Mahasiswa Mesin. Kegiatan IFEM pada tahun 2022 ini mengangkat tema terkait “Electric Vehicle for Our Bright Future” dengan serangkaian kegiatan yang bervariasi dari bulan Februari hingga bulan Mei 2022." />
+  <meta name="author" content="IFEM ITS 2022" />
+  <meta name="keywords" content="IFEM,ITS,IFEM ITS,IFEM 2022,IFEM ITS 2022,Teknik Mesin,Teknik Mesin ITS,Rancang Bangun,Case Competition,MSM,Pameran,Webinar,Talkshow,Workshop," />
+  <meta name="robots" content="index,follow" />
   <link rel="shortcut icon" href="/img/logo-only.png" type="image/x-icon">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/vendor/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" href="/css/style.css?modify={{ date('Ymd') }}">
+  <link rel="stylesheet" href="/css/style.css?modify={{ date("Ymd") }}">
   <!-- AOS -->
   <link rel="stylesheet" href="/vendor/aos/dist/aos.css" />
 

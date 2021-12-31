@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('visited')->group(function () {
   Route::get('/', [PagesController::class, 'index']);
+  Route::get('/about', [PagesController::class, 'about']);
   Route::get('/coming-soon', function () {
     return view('errors.comingsoon');
   });
@@ -79,7 +80,5 @@ Route::get('/visitor_data', [AdminController::class, 'visitor_data']);
 // FOR SHORT LINKS
 Route::get('/{shortlink:short}', [ShortlinkController::class, 'show'])->middleware('visited');
 Route::fallback(function () {
-  return view('errors.404', [
-    'title' => '404 Not Found'
-  ]);
+  return view('errors.404');
 })->middleware('visited');

@@ -77,6 +77,13 @@
         </li>
       </ul>
     </li>
+    <li class="{{ Request::is('admin/effect') ? 'mm-active' : '' }}">
+      <a href="/admin/effect">
+        <div class="parent-icon"><i class="bi bi-building"></i>
+        </div>
+        <div class="menu-title">EFFECT</div>
+      </a>
+    </li>
 
   </ul>
   <!--end navigation-->

@@ -39,6 +39,13 @@
                 color: $color-white;
                 text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
             }
+            .form-subhead {
+                font-family: $font-alternates;
+                font-weight: 600;
+                font-size: 1.2rem;
+                color: $color-white;
+                text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+            }
             .form-label,
             .form-check-label {
                 font-family: $font-poppins;

@@ -179,9 +179,27 @@ return [
         'promotion'         => 'Media Promosi',
         'share'             => 'Bukti share',
         'amount'            => 'Jumlah produk',
+        'member1'           => 'Nama anggota 1',
+        'member2'           => 'Nama anggota 2',
+        'member3'           => 'Nama anggota 3',
+        'member4'           => 'Nama anggota 4',
+        'member5'           => 'Nama anggota 5',
+        'photo1'            => 'Foto formal',
+        'photo2'            => 'Foto formal',
+        'photo3'            => 'Foto formal',
+        'photo4'            => 'Foto formal',
+        'photo5'            => 'Foto formal',
+        'identity1'         => 'Scan KTM',
+        'identity2'         => 'Scan KTM',
+        'identity3'         => 'Scan KTM',
+        'identity4'         => 'Scan KTM',
+        'identity5'         => 'Scan KTM',
+        'team'              => 'Nama kelompok/tim',
+        'collage'           => 'Perguruan tinggi',
+        'proposal'          => 'Proposal',
         // Admin
         'original'          => 'URL asli',
-        'short'             => 'Short link'
+        'short'             => 'Short link',
     ],
 
 ];

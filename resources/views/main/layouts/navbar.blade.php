@@ -13,7 +13,7 @@
         <li class="nav-item mx-auto mx-lg-4 my-2 text-center {{ Request::is('/') ? 'active' : '' }}">
           <a class="nav-link px-0" href="/">Home</a>
         </li>
-        <li class="nav-item mx-auto dropdown {{ (Request::is('webinar**') or Request::is('msm**') or Request::is('pameran**')) ? 'active' : '' }}">
+        <li class="nav-item mx-auto dropdown {{ (Request::is('if-web**') or Request::is('msm**') or Request::is('iecc**') or Request::is('effect**')) ? 'active' : '' }}">
           <a class="nav-link dropdown-toggle text-center mx-auto" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Events
           </a>
@@ -21,11 +21,11 @@
             <li><a class="dropdown-item my-2" href="/if-web">IF-WEB</a></li>
             <li><a class="dropdown-item my-2" href="/msm">MSM</a></li>
             <li><a class="dropdown-item my-2" href="/iecc">IECC</a></li>
+            <li><a class="dropdown-item my-2" href="/effect">EFFECT</a></li>
+            <li><a class="dropdown-item my-2" href="/if-talk">IF-Talk</a></li>
+            <li><a class="dropdown-item my-2" href="/workshop">Workshop</a></li>
           </ul>
         </li>
-        {{-- <li class="nav-item mx-auto mx-lg-4 my-2 text-center">
-          <a class="nav-link px-0" href="webinar.html">Events</a>
-        </li> --}}
         <li class="nav-item mx-auto mx-lg-4 my-2 text-center">
           <a class="nav-link px-0" href="/coming-soon">Merch</a>
         </li>

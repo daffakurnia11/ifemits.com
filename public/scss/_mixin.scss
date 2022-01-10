@@ -24,6 +24,7 @@
 @mixin arrow-title() {
     .arrow-title {
         margin-top: 3rem;
+        overflow-x: hidden;
         &-text {
             font-family: $font-alternates;
             font-weight: bold;

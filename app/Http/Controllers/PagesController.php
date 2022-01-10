@@ -20,7 +20,7 @@ class PagesController extends Controller
         ]);
     }
 
-    // Webinar
+    // IF-WEB
     public function webinar_info()
     {
         return view('main.if-web.index', [
@@ -36,7 +36,7 @@ class PagesController extends Controller
         ]);
     }
 
-    // Pameran
+    // IECC
     public function pameran_info()
     {
         return view('main.iecc.index', [
@@ -63,6 +63,30 @@ class PagesController extends Controller
     {
         return view('main.iecc.fnb.index', [
             'title' => 'Informasi F&B'
+        ]);
+    }
+
+    // EFFECT
+    public function effect_info()
+    {
+        return view('main.effect.index', [
+            'title' => 'EFFECT'
+        ]);
+    }
+
+    // IF-Talk
+    public function talkshow_info()
+    {
+        return view('main.if-talk.index', [
+            'title' => 'IF-Talk 2022'
+        ]);
+    }
+
+    // Workshop
+    public function workshop_info()
+    {
+        return view('main.workshop.index', [
+            'title' => 'Workshop'
         ]);
     }
 }

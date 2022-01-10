@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\Exh_guestController;
 use App\Http\Controllers\Admin\Exh_sellerController;
 use App\Http\Controllers\Admin\ShortlinkController;
 use App\Http\Controllers\Admin\WebinarController;
+use App\Http\Controllers\EffectController;
 use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
@@ -57,6 +58,20 @@ Route::middleware('visited')->group(function () {
       Route::post('/registrasi', [Exh_sellerController::class, 'store']);
     });
   });
+
+  Route::prefix('effect')->group(function () {
+    Route::get('/', [PagesController::class, 'effect_info']);
+    Route::get('/registrasi', [EffectController::class, 'create']);
+    Route::post('/registrasi', [EffectController::class, 'store']);
+  });
+
+  Route::prefix('if-talk')->group(function () {
+    Route::get('/', [PagesController::class, 'talkshow_info']);
+  });
+
+  Route::prefix('workshop')->group(function () {
+    Route::get('/', [PagesController::class, 'workshop_info']);
+  });
 });
 
 // Admin Routing
@@ -67,17 +82,22 @@ Route::post('/logout', [AdminController::class, 'logout']);
 Route::prefix('admin')->middleware('auth')->group(function () {
   Route::get('/', [AdminController::class, 'index']);
   Route::resource('shortlink', ShortlinkController::class);
+  // IF-WEB
   Route::resource('if-web', WebinarController::class)->parameters([
     'if-web'  => 'webinar'
   ])->except(['create', 'store', 'edit', 'update']);
+  // MSM
   Route::resource('msm', CompetitionController::class)->parameters([
     'msm', 'competition'
   ])->except(['create', 'store', 'edit', 'update']);
+  // IECC
   Route::prefix('iecc')->group(function () {
     Route::resource('pengunjung', Exh_guestController::class)->parameter('pengunjung', 'exh_guest')->except(['store', 'edit', 'update', 'show']);
     Route::resource('exhibitor', Exh_exhibitorController::class)->parameter('exhibitor', 'exh_exhibitor')->except(['create', 'store', 'edit', 'update']);
     Route::resource('food-and-beverage', Exh_sellerController::class)->parameter('food-and-beverage', 'exh_seller')->except(['create', 'store', 'edit', 'update']);
   });
+  // EFFECT
+  Route::resource('effect', EffectController::class)->except(['create', 'store', 'edit', 'update']);
 });
 
 Route::get('/visitor_data', [AdminController::class, 'visitor_data']);

@@ -14,6 +14,55 @@ $(function () {
     $(this).find('.team-desc').removeClass('hovered');
   });
 
+  $('.one-two').on('click', function () {
+    $('#firstForm').fadeOut("3000", function () {
+      $(this).css({ display: "none" });
+      $('#secondForm').fadeIn("3000", function () {
+        $(this).css({ display: "block" });
+      });
+    });
+  })
+  $('.two-one').on('click', function () {
+    $('#secondForm').fadeOut("3000", function () {
+      $(this).css({ display: "none" });
+      $('#firstForm').fadeIn("3000", function () {
+        $(this).css({ display: "block" });
+      });
+    })
+  });
+  $('.two-three').on('click', function () {
+    $('#secondForm').fadeOut("3000", function () {
+      $(this).css({ display: "none" });
+      $('#thirdForm').fadeIn("3000", function () {
+        $(this).css({ display: "block" });
+      });
+    });
+  })
+  $('.three-two').on('click', function () {
+    $('#thirdForm').fadeOut("3000", function () {
+      $(this).css({ display: "none" });
+      $('#secondForm').fadeIn("3000", function () {
+        $(this).css({ display: "block" });
+      });
+    })
+  });
+  $('.three-four').on('click', function () {
+    $('#thirdForm').fadeOut("3000", function () {
+      $(this).css({ display: "none" });
+      $('#fourthForm').fadeIn("3000", function () {
+        $(this).css({ display: "block" });
+      });
+    });
+  })
+  $('.four-three').on('click', function () {
+    $('#fourthForm').fadeOut("3000", function () {
+      $(this).css({ display: "none" });
+      $('#thirdForm').fadeIn("3000", function () {
+        $(this).css({ display: "block" });
+      });
+    })
+  });
+
   const meaning = ['Adaptif', 'Bentuk Isometri', 'Gear', '6 Gerigi', 'Lubang di tengah'];
   const desc = [
     'Mudah menyesuaikan (diri) dengan keadaan',

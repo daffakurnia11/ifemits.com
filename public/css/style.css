@@ -32,6 +32,10 @@
   background: #4e489c;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: #000c30;
   position: relative;
@@ -622,6 +626,7 @@ canvas {
 
 .team .arrow-title {
   margin-top: 3rem;
+  overflow-x: hidden;
 }
 
 .team .arrow-title-text {
@@ -931,9 +936,8 @@ canvas {
 }
 
 #eventHeader .header-subtitle {
-  width: 600px;
-  max-width: 100%;
-  padding: 1.5rem 2.75rem;
+  width: fit-content;
+  padding: 1.5rem 4rem;
   font-family: Montserrat Alternates;
   font-weight: 800;
   font-size: 1.75rem;
@@ -969,6 +973,35 @@ canvas {
   .register-button {
     font-size: 1.75rem;
     padding: 1rem;
+  }
+}
+
+.guidebook-button {
+  background: linear-gradient(140deg, #000c30, #000c30) padding-box, linear-gradient(140deg, #3e5ca9 30%, #fc607e) border-box;
+  border-radius: 1.75rem;
+  border: 4px solid transparent;
+  margin-top: 3rem;
+  width: fit-content;
+  padding: 1rem 3rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  text-align: center;
+  color: #ffffff;
+  transition: ease-in-out 0.3s;
+}
+
+.guidebook-button:hover {
+  color: #ffffff;
+  text-shadow: 0px 0px 10px #ffffff;
+  box-shadow: 0px 0px 10px #ffffff;
+}
+
+@media screen and (max-width: 576px) {
+  .guidebook-button {
+    font-size: 1rem;
+    padding: 1rem 3rem;
   }
 }
 
@@ -1026,6 +1059,7 @@ canvas {
 
 #eventTopic .topic .arrow-title {
   margin-top: 3rem;
+  overflow-x: hidden;
 }
 
 #eventTopic .topic .arrow-title-text {
@@ -1085,6 +1119,56 @@ canvas {
   color: #ffffff;
 }
 
+#eventTopic .topic-container {
+  width: 1000px;
+  max-width: 100%;
+  background: linear-gradient(90deg, rgba(78, 72, 156, 0.5) 0%, rgba(30, 38, 92, 0.5) 100%);
+  box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.39);
+  border-radius: 20px;
+  padding: 3rem;
+  margin: 3rem auto 5rem;
+}
+
+#eventTopic .topic-container ol > li {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: #ffffff;
+}
+
+#eventTopic .topic-container ol > li .topic-name {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: #ffffff;
+}
+
+#eventTopic .topic-container ol > li .topic-desc {
+  margin: 1.5rem 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #ffffff;
+}
+
+#eventTopic .topic-wave-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#eventTopic .topic-wave-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  transform: rotateY(180deg);
+}
+
 #eventTopic .topic-icon1 {
   width: 330px;
   max-width: 100%;
@@ -1118,6 +1202,7 @@ canvas {
 
 #eventSpeaker .speaker .arrow-title {
   margin-top: 3rem;
+  overflow-x: hidden;
 }
 
 #eventSpeaker .speaker .arrow-title-text {
@@ -1237,6 +1322,7 @@ canvas {
 
 #eventPrize .prize .arrow-title {
   margin-top: 3rem;
+  overflow-x: hidden;
 }
 
 #eventPrize .prize .arrow-title-text {
@@ -1345,6 +1431,7 @@ canvas {
 
 #eventBundle .arrow-title {
   margin-top: 3rem;
+  overflow-x: hidden;
 }
 
 #eventBundle .arrow-title-text {
@@ -1374,12 +1461,20 @@ canvas {
 }
 
 #eventBundle .bundle-icon1 {
-  max-width: 350px;
+  width: 350px;
+  max-width: 100%;
   top: 20%;
   left: 0;
   position: absolute;
   z-index: -3;
   mix-blend-mode: overlay;
+}
+
+@media screen and (max-width: 768px) {
+  #eventBundle .bundle-icon1 {
+    width: 200px;
+    max-width: 100%;
+  }
 }
 
 #eventBundle .bundle-icon2 {
@@ -1389,6 +1484,13 @@ canvas {
   top: 60%;
   right: 0;
   z-index: -3;
+}
+
+@media screen and (max-width: 768px) {
+  #eventBundle .bundle-icon2 {
+    width: 200px;
+    max-width: 100%;
+  }
 }
 
 #eventBundle .bundle .bundle-container {
@@ -1490,12 +1592,26 @@ canvas {
   z-index: -1;
 }
 
+@media screen and (max-width: 768px) {
+  #eventSchedule .schedule-icon1 {
+    width: 200px;
+    max-width: 100%;
+  }
+}
+
 #eventSchedule .schedule-icon2 {
   width: 150px;
   position: absolute;
   top: 50%;
   left: 0;
   z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+  #eventSchedule .schedule-icon2 {
+    width: 200px;
+    max-width: 100%;
+  }
 }
 
 #eventSchedule .schedule-title {
@@ -1536,6 +1652,7 @@ canvas {
 
 #eventRegister .arrow-title {
   margin-top: 3rem;
+  overflow-x: hidden;
 }
 
 #eventRegister .arrow-title-text {
@@ -1573,8 +1690,33 @@ canvas {
   max-width: 100%;
 }
 
-#eventRegister .register-button img {
-  width: 45px;
+#eventTheme .theme-title {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+#eventTheme .theme-title-ball {
+  max-width: 55px;
+}
+
+#eventTheme .theme-container {
+  background: linear-gradient(140deg, #000c30, #000c30) padding-box, linear-gradient(140deg, #3e5ca9 30%, #fc607e) border-box;
+  border-radius: 1.75rem;
+  border: 4px solid transparent;
+  width: 900px;
+  max-width: 100%;
+  padding: 2.5rem 4rem;
+  margin: 2rem auto 6rem;
+}
+
+#eventTheme .theme-container .theme-text {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 576px) {
@@ -1583,6 +1725,7 @@ canvas {
   }
   #eventHeader .header-subtitle {
     font-size: 1rem;
+    padding: 1rem 1rem;
   }
   #eventAbout .about {
     margin: 5rem 2rem;
@@ -1605,6 +1748,10 @@ canvas {
   #eventTopic .topic-content .topic-desc {
     text-align: justify;
     font-size: 1rem;
+  }
+  #eventTopic .topic-container {
+    padding: 1.5rem;
+    margin: 3rem 0 5rem;
   }
   #eventTimeline .timeline .gradientbox-title {
     font-size: 1.75rem;
@@ -1670,6 +1817,33 @@ canvas {
   #eventSchedule .schedule-icon {
     width: 70px;
   }
+  #eventTheme .theme-title {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #ffffff;
+  }
+  #eventTheme .theme-title-ball {
+    margin-left: 1.5rem;
+    margin-right: 0.5rem;
+    max-width: 40px;
+  }
+  #eventTheme .theme-container {
+    background: linear-gradient(140deg, #000c30, #000c30) padding-box, linear-gradient(140deg, #3e5ca9 30%, #fc607e) border-box;
+    border-radius: 1.75rem;
+    border: 4px solid transparent;
+    width: 900px;
+    max-width: 100%;
+    padding: 1.5rem 1.75rem;
+    margin: 2rem auto 6rem;
+  }
+  #eventTheme .theme-container .theme-text {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #ffffff;
+  }
 }
 
 #eventForm .form-name {
@@ -1717,6 +1891,14 @@ canvas {
   font-size: 1.75rem;
   color: #ffffff;
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+}
+
+#eventForm .form-container .form-subhead {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
 }
 
 #eventForm .form-container .form-label,

@@ -16,7 +16,7 @@ class Exh_exhibitorController extends Controller
     public function index()
     {
         return view('admin.exhibitor.index', [
-            'title'     => 'Data Pendaftar Exhibitor',
+            'title'     => 'Data Pendaftar Exhibitor IECC',
             'datas'     => Exh_exhibitor::latest()->get()
         ]);
     }
@@ -28,7 +28,9 @@ class Exh_exhibitorController extends Controller
      */
     public function create()
     {
-        //
+        return view('main.iecc.exhibitor.regis', [
+            'title' => 'Registrasi Exhibitor IECC'
+        ]);
     }
 
     /**

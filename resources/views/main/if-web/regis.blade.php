@@ -18,11 +18,11 @@
   <div class="container form">
     <div class="row align-items-center">
       <div class="col-lg-6 form-name d-flex flex-column justify-content-center">
-        <h1 class="form-title text-center" data-aos="zoom-in">Webinar</h1>
-        <p class="form-subtitle text-center mx-auto" data-aos="zoom-in" data-aos-delay="250">Potensi Mobil Listrik di Indonesia</p>
+        <h1 class="form-title text-center" data-aos="zoom-in">IF-WEB</h1>
+        <p class="form-subtitle text-center mx-auto" data-aos="zoom-in" data-aos-delay="250">IFEM WEBINAR</p>
       </div>
       <div class="col-lg-6">
-        <form action="/webinar/registrasi" method="POST" class="form-container my-5" enctype="multipart/form-data" data-aos="zoom-in" data-aos-delay="500">
+        <form action="/if-web/registrasi" method="POST" class="form-container my-5" enctype="multipart/form-data" data-aos="zoom-in" data-aos-delay="500">
           @csrf
           <img src="../public/img/icon/four-hexa.svg" class="form-bgicon" alt="">
           <h2 class="form-head mb-4">Registrasi</h2>

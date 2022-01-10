@@ -28,7 +28,9 @@ class CompetitionController extends Controller
      */
     public function create()
     {
-        //
+        return view('main.msm.regis', [
+            'title' => 'Registrasi MSM'
+        ]);
     }
 
     /**

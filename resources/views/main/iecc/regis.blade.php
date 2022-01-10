@@ -18,11 +18,11 @@
   <div class="container form">
     <div class="row align-items-center">
       <div class="col-lg-6 form-name d-flex flex-column justify-content-center">
-        <h1 class="form-title text-center" data-aos="zoom-in">Pameran</h1>
+        <h1 class="form-title text-center" data-aos="zoom-in">IECC</h1>
         <p class="form-subtitle text-center mx-auto" data-aos="zoom-in" data-aos-delay="250">Pengunjung</p>
       </div>
       <div class="col-lg-6">
-        <form action="/pameran/registrasi" method="POST" class="form-container my-5" enctype="multipart/form-data" data-aos="zoom-in" data-aos-delay="500">
+        <form action="/iecc/registrasi" method="POST" class="form-container my-5" enctype="multipart/form-data" data-aos="zoom-in" data-aos-delay="500">
           @csrf
           <h2 class="form-head mb-4">Registrasi</h2>
           <div class="row">

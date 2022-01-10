@@ -3,13 +3,15 @@
 @section('container')
   <!--Header-->
   <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-    <div class="breadcrumb-title pe-3">Exhibitor</div>
+    <div class="breadcrumb-title pe-3">Exhibitor IECC</div>
     <div class="ps-3 ms-auto">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb mb-0 p-0">
           <li class="breadcrumb-item"><a href="/admin"><i class="bx bx-home-alt"></i> Dashboard</a>
           </li>
-          <li class="breadcrumb-item active" aria-current="page">Pendaftar Exhibitor</li>
+          <li class="breadcrumb-item active"><i class="bi bi-shop-window"></i> IECC
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Exhibitor</li>
         </ol>
       </nav>
     </div>
@@ -20,7 +22,7 @@
     <div id="notification" data-flashdata="{{ session('notif') }}"></div>
   @endif
 
-  <h6 class="mb-0 text-uppercase">Data Pendaftar Exhibitor</h6>
+  <h6 class="mb-0 text-uppercase">Data Pendaftar Exhibitor IECC</h6>
   <hr>
   <div class="card">
     <div class="card-body">

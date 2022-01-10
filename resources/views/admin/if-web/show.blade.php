@@ -3,12 +3,12 @@
 @section('container')
   <!--Header-->
   <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-    <div class="breadcrumb-title pe-3">Webinar</div>
+    <div class="breadcrumb-title pe-3">IF-WEB</div>
     <div class="ps-3 ms-auto">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb mb-0 p-0">
           <li class="breadcrumb-item"><a href="/admin"><i class="bx bx-home-alt"></i> Dashboard</a>
-          <li class="breadcrumb-item"><a href="/admin/webinar"><i class="bi bi-easel"></i> Pendaftar Webinar</a>
+          <li class="breadcrumb-item"><a href="/admin/if-web"><i class="bi bi-easel"></i> IF-WEB</a>
           </li>
           <li class="breadcrumb-item active" aria-current="page">{{ $webinar->register_code }}</li>
         </ol>

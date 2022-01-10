@@ -26,14 +26,14 @@
             ditampilkan di IFEM Exhibition and Closing Ceremony dapat mengisi form pendaftaran di bawah ini. Atau
             dapat menghubungi contact person kami</p>
           <div class="text-start mt-4">
-            <a href="/exhibitor" class="form-submit d-block my-4" tabindex="11">Daftar</a>
+            <a href="/iecc/exhibitor" class="form-submit d-block my-4" tabindex="11">Daftar</a>
           </div>
           <h2 class="form-head mb-3 mt-5">Food and Beverages</h2>
           <p class="form-desc">Calling out all food and beverages tenants!!! Bagi kalian yang memiliki bisnis
             kuliner dan ingin mendirikan stand di IFEM Exhibition and Closing Ceremony dapat mengisi form pendaftaran
             dibawah ini atau dapat menghubungi contact person kami.</p>
           <div class="text-start mt-4">
-            <a href="/food-and-beverage" class="form-submit d-block my-4" tabindex="11">Daftar</a>
+            <a href="/iecc/food-and-beverage" class="form-submit d-block my-4" tabindex="11">Daftar</a>
           </div>
         </div>
       </div>

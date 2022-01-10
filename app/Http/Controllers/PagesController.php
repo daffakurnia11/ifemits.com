@@ -23,17 +23,8 @@ class PagesController extends Controller
     // Webinar
     public function webinar_info()
     {
-        return view('main.webinar.index', [
-            'title' => 'Webinar'
-        ]);
-    }
-    public function webinar_regis()
-    {
-        // return view('errors.comingsoon', [
-        //     'title' => 'Registrasi Webinar'
-        // ]);
-        return view('main.webinar.regis', [
-            'title' => 'Registrasi Webinar'
+        return view('main.if-web.index', [
+            'title' => 'IF-WEB'
         ]);
     }
 
@@ -44,58 +35,34 @@ class PagesController extends Controller
             'title' => 'MSM'
         ]);
     }
-    public function msm_regis()
-    {
-        return view('main.msm.regis', [
-            'title' => 'Registrasi MSM'
-        ]);
-    }
 
     // Pameran
     public function pameran_info()
     {
-        return view('main.pameran.index', [
-            'title' => 'Pameran'
+        return view('main.iecc.index', [
+            'title' => 'IECC'
         ]);
     }
     public function pameran_detail()
     {
-        return view('main.pameran.info', [
-            'title' => 'Informasi Pameran'
-        ]);
-    }
-    public function pameran_regis()
-    {
-        return view('main.pameran.regis', [
-            'title' => 'Registrasi Pengunjung Pameran'
+        return view('main.iecc.info', [
+            'title' => 'Informasi IECC'
         ]);
     }
 
     // Exhibitor
     public function exhibitor_info()
     {
-        return view('main.pameran.exhibitor.index', [
+        return view('main.iecc.exhibitor.index', [
             'title' => 'Informasi Exhibitor'
-        ]);
-    }
-    public function exhibitor_regis()
-    {
-        return view('main.pameran.exhibitor.regis', [
-            'title' => 'Registrasi Exhibitor Pameran'
         ]);
     }
 
     // Food & Beverage
     public function fnb_info()
     {
-        return view('main.pameran.fnb.index', [
+        return view('main.iecc.fnb.index', [
             'title' => 'Informasi F&B'
-        ]);
-    }
-    public function fnb_regis()
-    {
-        return view('main.pameran.fnb.regis', [
-            'title' => 'Registrasi F&B Pameran'
         ]);
     }
 }

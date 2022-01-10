@@ -39,11 +39,11 @@
       </ul>
     </li>
     <li class="menu-label">Acara</li>
-    <li class="{{ Request::is('admin/webinar') ? 'mm-active' : '' }}">
-      <a href="/admin/webinar">
+    <li class="{{ Request::is('admin/if-web') ? 'mm-active' : '' }}">
+      <a href="/admin/if-web">
         <div class="parent-icon"><i class="bi bi-easel"></i>
         </div>
-        <div class="menu-title">Webinar</div>
+        <div class="menu-title">IF-WEB</div>
       </a>
     </li>
     <li class="{{ Request::is('admin/msm') ? 'mm-active' : '' }}">
@@ -53,25 +53,25 @@
         <div class="menu-title">MSM</div>
       </a>
     </li>
-    <li class="{{ (Request::is('admin/pengunjung') || Request::is('admin/exhibitor') || Request::is('admin/food-and-beverage')) ? 'mm-active' : '' }}">
+    <li class="{{ Request::is('admin/iecc**') ? 'mm-active' : '' }}">
       <a class="has-arrow" href="#" aria-expanded="true">
         <div class="parent-icon"><i class="bi bi-shop-window"></i>
         </div>
-        <div class="menu-title">Pameran</div>
+        <div class="menu-title">IECC</div>
       </a>
-      <ul class="mm-collapse {{ (Request::is('admin/pengunjung') || Request::is('admin/exhibitor') || Request::is('admin/food-and-beverage')) ? 'mm-show' : '' }}" style="">
-        <li class="{{ Request::is('admin/pengunjung') ? 'mm-active' : '' }}"> 
-          <a href="/admin/pengunjung"><i class="bi bi-arrow-right-short"></i>
+      <ul class="mm-collapse {{ Request::is('admin/iecc**') ? 'mm-show' : '' }}" style="">
+        <li class="{{ Request::is('admin/iecc/pengunjung') ? 'mm-active' : '' }}"> 
+          <a href="/admin/iecc/pengunjung"><i class="bi bi-arrow-right-short"></i>
             Pengunjung
           </a>
         </li>
-        <li class="{{ Request::is('admin/exhibitor') ? 'mm-active' : '' }}"> 
-          <a href="/admin/exhibitor"><i class="bi bi-arrow-right-short"></i>
+        <li class="{{ Request::is('admin/iecc/exhibitor') ? 'mm-active' : '' }}"> 
+          <a href="/admin/iecc/exhibitor"><i class="bi bi-arrow-right-short"></i>
             Exhibitor
           </a>
         </li>
-        <li class="{{ Request::is('admin/food-and-beverage') ? 'mm-active' : '' }}"> 
-          <a href="/admin/food-and-beverage"><i class="bi bi-arrow-right-short"></i>
+        <li class="{{ Request::is('admin/iecc/food-and-beverage') ? 'mm-active' : '' }}"> 
+          <a href="/admin/iecc/food-and-beverage"><i class="bi bi-arrow-right-short"></i>
             Food & Beverage
           </a>
         </li>

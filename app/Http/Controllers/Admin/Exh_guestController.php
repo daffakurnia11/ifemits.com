@@ -16,7 +16,7 @@ class Exh_guestController extends Controller
     public function index()
     {
         return view('admin.guest.index', [
-            'title'     => 'Data Pengunjung',
+            'title'     => 'Data Pengunjung IECC',
             'datas'     => Exh_guest::latest()->get()
         ]);
     }
@@ -28,7 +28,9 @@ class Exh_guestController extends Controller
      */
     public function create()
     {
-        //
+        return view('main.iecc.regis', [
+            'title' => 'Registrasi Pengunjung IECC'
+        ]);
     }
 
     /**

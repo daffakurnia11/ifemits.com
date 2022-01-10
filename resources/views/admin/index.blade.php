@@ -9,7 +9,7 @@
         <ol class="breadcrumb mb-0 p-0">
           {{-- <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
           </li> --}}
-          <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+          <li class="breadcrumb-item active" aria-current="page"><i class="bi bi-house-door"></i> Dashboard</li>
         </ol>
       </nav>
     </div>
@@ -70,7 +70,7 @@
         <div class="card-body">
           <div class="d-flex align-items-center">
             <div class="">
-              <p class="mb-1">Webinar</p>
+              <p class="mb-1">IF-WEB</p>
               <h4 class="mb-0 text-success">{{ $webinars }}</h4>
             </div>
             <div class="ms-auto fs-2 text-success">
@@ -119,7 +119,7 @@
         <div class="card-body">
           <div class="d-flex align-items-center">
             <div>
-                <p class="mb-0 text-secondary">Total Pengunjung</p>
+                <p class="mb-0 text-secondary">Total Pengunjung IECC</p>
                 <h4 class="my-1">{{ $guests }}</h4>
                 @if ($guest_inc > 0)
                   <p class="mb-0 font-13 text-success"><i class="bi bi-caret-up-fill"></i> +{{ $guest_inc }} dari kemarin</p>
@@ -139,7 +139,7 @@
         <div class="card-body">
           <div class="d-flex align-items-center">
             <div>
-                <p class="mb-0 text-secondary">Total Exhibitor</p>
+                <p class="mb-0 text-secondary">Total Exhibitor IECC</p>
                 <h4 class="my-1">{{ $exhibitors }}</h4>
                 @if ($exhibitor_inc > 0)
                   <p class="mb-0 font-13 text-success"><i class="bi bi-caret-up-fill"></i> +{{ $exhibitor_inc }} dari kemarin</p>
@@ -159,7 +159,7 @@
         <div class="card-body">
           <div class="d-flex align-items-center">
             <div>
-                <p class="mb-0 text-secondary">Food & Beverage</p>
+                <p class="mb-0 text-secondary">Food & Beverage IECC</p>
                 <h4 class="my-1">{{ $sellers }}</h4>
                 @if ($seller_inc > 0)
                   <p class="mb-0 font-13 text-success"><i class="bi bi-caret-up-fill"></i> +{{ $seller_inc }} dari kemarin</p>

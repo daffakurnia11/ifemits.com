@@ -3,12 +3,15 @@
 @section('container')
   <!--Header-->
   <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-    <div class="breadcrumb-title pe-3">Food & Beverage</div>
+    <div class="breadcrumb-title pe-3">Food & Beverage IECC</div>
     <div class="ps-3 ms-auto">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb mb-0 p-0">
           <li class="breadcrumb-item"><a href="/admin"><i class="bx bx-home-alt"></i> Dashboard</a>
-          <li class="breadcrumb-item"><a href="/admin/food-and-beverage"><i class="bi bi-shop"></i> Pendaftar Food & Beverage</a>
+          </li>
+          <li class="breadcrumb-item active"><i class="bi bi-shop-window"></i> IECC
+          </li>
+          <li class="breadcrumb-item"><a href="/admin/iecc/food-and-beverage"><i class="bi bi-shop"></i> Food & Beverage</a>
           </li>
           <li class="breadcrumb-item active" aria-current="page">{{ $seller->register_code }}</li>
         </ol>

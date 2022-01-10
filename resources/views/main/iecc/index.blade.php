@@ -23,8 +23,8 @@
   <!-- Header -->
   <header id="eventHeader">
     <div class="container header d-flex flex-column justify-content-center align-items-center">
-      <h1 class="header-title text-center" data-aos="fade-up" data-aos-offset="0">Pameran</h1>
-      <p class="header-subtitle text-center m-0" data-aos="fade-up" data-aos-delay="500">Electric Vehicle</p>
+      <h1 class="header-title text-center" data-aos="fade-up" data-aos-offset="0">IECC</h1>
+      <p class="header-subtitle text-center m-0" data-aos="fade-up" data-aos-delay="500">IFEM Exhibition and Closing Ceremony</p>
     </div>
   </header>
   <!-- End of Header -->
@@ -65,7 +65,7 @@
           </div>
         </div>
         <div class="col-md-5" data-aos="fade-right" data-aos-delay="500">
-          <a href="/pameran/registrasi" class="bundle-regis text-center mx-auto">Order</a>
+          <a href="/iecc/registrasi" class="bundle-regis text-center mx-auto">Order</a>
           <p class="bundle-notes text-center mt-2">only for the first 300 participants</p>
         </div>
       </div>
@@ -136,7 +136,7 @@
         <img src="/img/icon/four-arrow-left.svg" class="arrow-title-right" alt="" data-aos="fade-left" data-aos-delay="250">
       </h2>
       <div class="register d-flex justify-content-center align-items-center">
-        <a href="/pameran/info" class="register-button d-block mt-0 mb-5" data-aos="fade-up" data-aos-delay="500">
+        <a href="/iecc/info" class="register-button d-block mt-0 mb-5" data-aos="fade-up" data-aos-delay="500">
           <img src="/img/icon/play-icon.png" class="d-inline-block me-3" alt="">
           Register
         </a>

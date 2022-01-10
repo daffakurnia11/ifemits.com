@@ -23,8 +23,8 @@
   <!-- Header -->
   <header id="eventHeader">
     <div class="container header d-flex flex-column justify-content-center align-items-center">
-      <h1 class="header-title text-center" data-aos="fade-up">Webinar</h1>
-      <p class="header-subtitle text-center m-0" data-aos="fade-up" data-aos-delay="500">Potensi Mobil Listrik di Indonesia</p>
+      <h1 class="header-title text-center" data-aos="fade-up">IF-WEB</h1>
+      <p class="header-subtitle text-center m-0" data-aos="fade-up" data-aos-delay="500">IFEM WEBINAR</p>
     </div>
   </header>
   <!-- End of Header -->
@@ -40,7 +40,7 @@
         akan dihadirkan pembicara dari pihak dosen Departemen Teknik Mesin FT-IRS ITS, seseorang yang ahli dalam bidang
         industri EV di Indonesia dan dalam bidang kompetisi mobil listrik di Indonesia
       </p>
-      <a href="/webinar/registrasi" class="register-button text-center d-block mx-auto" data-aos="fade-up" data-aos-delay="500" data-aos-offset="0">Register Now!</a>
+      <a href="/if-web/registrasi" class="register-button text-center d-block mx-auto" data-aos="fade-up" data-aos-delay="500" data-aos-offset="0">Register Now!</a>
     </div>
   </section>
   <!-- End of About -->

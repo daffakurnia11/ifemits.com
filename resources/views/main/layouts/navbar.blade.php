@@ -18,9 +18,9 @@
             Events
           </a>
           <ul class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item my-2" href="/webinar">Webinar</a></li>
+            <li><a class="dropdown-item my-2" href="/if-web">IF-WEB</a></li>
             <li><a class="dropdown-item my-2" href="/msm">MSM</a></li>
-            <li><a class="dropdown-item my-2" href="/pameran">Pameran</a></li>
+            <li><a class="dropdown-item my-2" href="/iecc">IECC</a></li>
           </ul>
         </li>
         {{-- <li class="nav-item mx-auto mx-lg-4 my-2 text-center">

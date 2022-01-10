@@ -9,7 +9,7 @@
         <ol class="breadcrumb mb-0 p-0">
           <li class="breadcrumb-item"><a href="/admin"><i class="bx bx-home-alt"></i> Dashboard</a>
           </li>
-          <li class="breadcrumb-item active" aria-current="page">Pendaftar MSM</li>
+          <li class="breadcrumb-item active" aria-current="page"><i class="bi bi-journal-text"></i> MSM</li>
         </ol>
       </nav>
     </div>

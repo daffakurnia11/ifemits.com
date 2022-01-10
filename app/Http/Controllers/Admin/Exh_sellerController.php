@@ -16,7 +16,7 @@ class Exh_sellerController extends Controller
     public function index()
     {
         return view('admin.seller.index', [
-            'title'     => 'Data Pendaftar Food & Beverage',
+            'title'     => 'Data Pendaftar Food & Beverage IECC',
             'datas'     => Exh_seller::latest()->get()
         ]);
     }
@@ -28,7 +28,9 @@ class Exh_sellerController extends Controller
      */
     public function create()
     {
-        //
+        return view('main.iecc.fnb.regis', [
+            'title' => 'Registrasi F&B IECC'
+        ]);
     }
 
     /**

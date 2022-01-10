@@ -3,13 +3,13 @@
 @section('container')
   <!--Header-->
   <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-    <div class="breadcrumb-title pe-3">Webinar</div>
+    <div class="breadcrumb-title pe-3">IF-WEB</div>
     <div class="ps-3 ms-auto">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb mb-0 p-0">
           <li class="breadcrumb-item"><a href="/admin"><i class="bx bx-home-alt"></i> Dashboard</a>
           </li>
-          <li class="breadcrumb-item active" aria-current="page">Pendaftar Webinar</li>
+          <li class="breadcrumb-item active" aria-current="page"><i class="bi bi-easel"></i> IF-WEB</li>
         </ol>
       </nav>
     </div>
@@ -20,7 +20,7 @@
     <div id="notification" data-flashdata="{{ session('notif') }}"></div>
   @endif
 
-  <h6 class="mb-0 text-uppercase">Data Pendaftar Webinar</h6>
+  <h6 class="mb-0 text-uppercase">Data Pendaftar IF-WEB</h6>
   <hr>
   <div class="card">
     <div class="card-body">
@@ -49,9 +49,9 @@
               <td class="align-middle">{{ $data->phone }}</td>
               <td class="align-middle text-center">{{ $data->age }}</td>
               <td class="align-middle text-center">
-                <a href="/admin/webinar/{{ $data->register_code }}" class="btn btn-sm text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Detail"><i class="bi bi-eye"></i></a>
+                <a href="/admin/iecc/{{ $data->register_code }}" class="btn btn-sm text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Detail"><i class="bi bi-eye"></i></a>
                 
-                <form action="/admin/webinar/{{ $data->register_code }}" method="POST" class="d-inline">
+                <form action="/admin/iecc/{{ $data->register_code }}" method="POST" class="d-inline">
                   @csrf
                   @method('DELETE')
                   <button type="submit" class="btn btn-sm text-danger deleteButton" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Hapus" onclick="return confirm('Data akan dihapus, lanjutkan?')"><i class="bi bi-trash"></i></button>

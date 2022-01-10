@@ -76,7 +76,7 @@
         </li>
       </ol>
       <div class="text-start mt-4">
-        <a href="/food-and-beverage/registrasi" class="form-submit d-block my-4" tabindex="11">Lanjut</a>
+        <a href="/iecc/food-and-beverage/registrasi" class="form-submit d-block my-4" tabindex="11">Lanjut</a>
       </div>
     </div>
   </div>

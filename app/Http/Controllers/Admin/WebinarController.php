@@ -15,8 +15,8 @@ class WebinarController extends Controller
      */
     public function index()
     {
-        return view('admin.webinar.index', [
-            'title'     => 'Data Pendaftar Webinar',
+        return view('admin.if-web.index', [
+            'title'     => 'Data Pendaftar IF-WEB',
             // 'datas'     => Webinar::whereRaw('MONTH(created_at) = 11')->get()
             'datas'     => Webinar::latest()->get()
         ]);
@@ -29,7 +29,9 @@ class WebinarController extends Controller
      */
     public function create()
     {
-        //
+        return view('main.if-web.regis', [
+            'title' => 'Registrasi IF-WEB'
+        ]);
     }
 
     /**
@@ -76,7 +78,7 @@ class WebinarController extends Controller
             $validated['promotion'] = implode(', ', $request->promotion);
 
             Webinar::create($validated);
-            return redirect('/webinar/registrasi')->with('message', 'Registration Success');
+            return redirect('/if-web/registrasi')->with('message', 'Registration Success');
         } else {
             return back()->with('message', 'No File Uploaded');
         }
@@ -90,7 +92,7 @@ class WebinarController extends Controller
      */
     public function show(Webinar $webinar)
     {
-        return view('admin.webinar.show', [
+        return view('admin.if-web.show', [
             'title'     => 'Data Pendaftar ' . $webinar->register_code,
             'webinar'   => $webinar
         ]);

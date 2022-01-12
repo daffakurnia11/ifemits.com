@@ -29,6 +29,6 @@ class DatabaseSeeder extends Seeder
         $user->roles    = 'Admin';
         $user->save();
 
-        Bundle::factory(299)->create();
+        // Bundle::factory(299)->create();
     }
 }

@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Bundle;
 use App\Models\Competition;
 use App\Models\Exh_exhibitor;
-use App\Models\Exh_guest;
 use App\Models\Exh_seller;
 use App\Models\Shortlink;
 use App\Models\Visitor;
@@ -86,6 +86,17 @@ class AdminController extends Controller
 
     public function index()
     {
+        $bundles_3 = Bundle::where('bundle', 3)->get();
+        $bundles_2 = Bundle::where('bundle', 2)->get();
+        $ticket_3 = 0;
+        $ticket_2 = 0;
+        foreach ($bundles_3 as $bundle) {
+            $ticket_3 = $ticket_3 + $bundle->ticket;
+        }
+        foreach ($bundles_2 as $bundle) {
+            $ticket_2 = $ticket_2 + $bundle->ticket;
+        }
+
         return view('admin.index', [
             'title'             => 'Admin Dashboard',
 
@@ -101,14 +112,20 @@ class AdminController extends Controller
             'competitions'      => Competition::count(),
             'competition_inc'   => Competition::whereDate('created_at', Carbon::today())->count(),
 
-            'guests'            => Exh_guest::count(),
-            'guest_inc'         => Exh_guest::whereDate('created_at', Carbon::today())->count(),
+            'guests'            => Bundle::count(),
+            'guest_inc'         => Bundle::whereDate('created_at', Carbon::today())->count(),
 
             'exhibitors'        => Exh_exhibitor::count(),
             'exhibitor_inc'     => Exh_exhibitor::whereDate('created_at', Carbon::today())->count(),
 
             'sellers'           => Exh_seller::count(),
             'seller_inc'        => Exh_seller::whereDate('created_at', Carbon::today())->count(),
+
+            'ticket_3'          => $ticket_3,
+            'ticket_3_inc'      => Bundle::where('bundle', 3)->whereDate('created_at', Carbon::today())->count(),
+
+            'ticket_2'          => $ticket_2,
+            'ticket_2_inc'      => Bundle::where('bundle', 2)->whereDate('created_at', Carbon::today())->count(),
         ]);
     }
 }

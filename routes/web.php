@@ -7,7 +7,8 @@ use App\Http\Controllers\Admin\Exh_guestController;
 use App\Http\Controllers\Admin\Exh_sellerController;
 use App\Http\Controllers\Admin\ShortlinkController;
 use App\Http\Controllers\Admin\WebinarController;
-use App\Http\Controllers\EffectController;
+use App\Http\Controllers\Admin\EffectController;
+use App\Http\Controllers\Admin\BundleController;
 use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
@@ -44,8 +45,6 @@ Route::middleware('visited')->group(function () {
   Route::prefix('iecc')->group(function () {
     Route::get('/', [PagesController::class, 'pameran_info']);
     Route::get('/info', [PagesController::class, 'pameran_detail']);
-    Route::get('/registrasi', [Exh_guestController::class, 'create']);
-    Route::post('/registrasi', [Exh_guestController::class, 'store']);
     Route::prefix('exhibitor')->group(function () {
       Route::get('/', [PagesController::class, 'exhibitor_info']);
       Route::get('/registrasi', [Exh_exhibitorController::class, 'create']);
@@ -65,8 +64,10 @@ Route::middleware('visited')->group(function () {
     Route::post('/registrasi', [EffectController::class, 'store']);
   });
 
-  Route::prefix('if-talk')->group(function () {
-    Route::get('/', [PagesController::class, 'talkshow_info']);
+  Route::get('/if-talk', [PagesController::class, 'talkshow_info']);
+  Route::prefix('bundling')->group(function () {
+    Route::get('/registrasi', [BundleController::class, 'create']);
+    Route::post('/registrasi', [BundleController::class, 'store']);
   });
 
   Route::prefix('workshop')->group(function () {
@@ -92,12 +93,14 @@ Route::prefix('admin')->middleware('auth')->group(function () {
   ])->except(['create', 'store', 'edit', 'update']);
   // IECC
   Route::prefix('iecc')->group(function () {
-    Route::resource('pengunjung', Exh_guestController::class)->parameter('pengunjung', 'exh_guest')->except(['store', 'edit', 'update', 'show']);
     Route::resource('exhibitor', Exh_exhibitorController::class)->parameter('exhibitor', 'exh_exhibitor')->except(['create', 'store', 'edit', 'update']);
     Route::resource('food-and-beverage', Exh_sellerController::class)->parameter('food-and-beverage', 'exh_seller')->except(['create', 'store', 'edit', 'update']);
   });
   // EFFECT
   Route::resource('effect', EffectController::class)->except(['create', 'store', 'edit', 'update']);
+  Route::resource('ticket', BundleController::class)->parameters([
+    'ticket'  => 'bundle'
+  ])->except(['create', 'store', 'edit', 'update']);
 });
 
 Route::get('/visitor_data', [AdminController::class, 'visitor_data']);

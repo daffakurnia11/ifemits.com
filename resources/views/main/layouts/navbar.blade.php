@@ -13,7 +13,7 @@
         <li class="nav-item mx-auto mx-lg-4 my-2 text-center {{ Request::is('/') ? 'active' : '' }}">
           <a class="nav-link px-0" href="/">Home</a>
         </li>
-        <li class="nav-item mx-auto dropdown {{ (Request::is('if-web**') or Request::is('msm**') or Request::is('iecc**') or Request::is('effect**')) ? 'active' : '' }}">
+        <li class="nav-item mx-auto dropdown {{ (Request::is('if-web**') or Request::is('msm**') or Request::is('iecc**') or Request::is('effect**') or Request::is('if-talk**') or Request::is('workshop**')) ? 'active' : '' }}">
           <a class="nav-link dropdown-toggle text-center mx-auto" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Events
           </a>

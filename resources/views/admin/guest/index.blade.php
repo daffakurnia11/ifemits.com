@@ -3,15 +3,14 @@
 @section('container')
   <!--Header-->
   <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-    <div class="breadcrumb-title pe-3">Pengunjung IECC</div>
+    <div class="breadcrumb-title pe-3">Bundling Ticket</div>
     <div class="ps-3 ms-auto">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb mb-0 p-0">
           <li class="breadcrumb-item"><a href="/admin"><i class="bx bx-home-alt"></i> Dashboard</a>
           </li>
-          <li class="breadcrumb-item active"><i class="bi bi-shop-window"></i> IECC
+          <li class="breadcrumb-item active"><i class="bi bi-ticket-perforated"></i> Bundling Ticket
           </li>
-          <li class="breadcrumb-item active" aria-current="page">Pengunjung</li>
         </ol>
       </nav>
     </div>
@@ -22,7 +21,7 @@
     <div id="notification" data-flashdata="{{ session('notif') }}"></div>
   @endif
 
-  <h6 class="mb-0 text-uppercase">Data Pengunjung IECC</h6>
+  <h6 class="mb-0 text-uppercase">Data Pembelian Tiket</h6>
   <hr>
   <div class="card">
     <div class="card-body">
@@ -56,7 +55,7 @@
               </td>
               <td class="align-middle text-center">
                 
-                <form action="/admin/pengunjung/{{ $data->register_code }}" method="POST" class="d-inline">
+                <form action="/admin/ticket/{{ $data->register_code }}" method="POST" class="d-inline">
                   @csrf
                   @method('DELETE')
                   <button type="submit" class="btn btn-sm text-danger deleteButton" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Hapus" onclick="return confirm('Data akan dihapus, lanjutkan?')"><i class="bi bi-trash"></i> Hapus</button>

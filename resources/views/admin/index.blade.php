@@ -18,7 +18,7 @@
 
   <h6 class="mb-0 text-uppercase">Overview</h6>
   <hr>
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-6">
     <div class="col">
       <div class="card radius-10">
         <div class="card-body">
@@ -111,6 +111,52 @@
         </div>
       </div>
     </div>
+    <div class="col">
+      <div class="card radius-10">
+        <div class="card-body">
+          <div class="d-flex align-items-center">
+            <div class="">
+              <p class="mb-1">Exhibitor IECC</p>
+              <h4 class="mb-0 text-secondary">{{ $exhibitors }}</h4>
+            </div>
+            <div class="ms-auto fs-2 text-secondary">
+              <i class="bi bi-cast"></i>
+            </div>
+          </div>
+          <div class="border-top my-2"></div>
+          <small class="mb-0">
+            @if ($exhibitor_inc > 0)
+              <span class="text-success">+{{ $exhibitor_inc }} dari kemarin</span>
+            @else
+              <span class="text-warning">{{ $exhibitor_inc }}</span>
+            @endif
+          </small>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card radius-10">
+        <div class="card-body">
+          <div class="d-flex align-items-center">
+            <div class="">
+              <p class="mb-1">Food & Beverage IECC</p>
+              <h4 class="mb-0 text-info">{{ $sellers }}</h4>
+            </div>
+            <div class="ms-auto fs-2 text-info">
+              <i class="bi bi-shop"></i>
+            </div>
+          </div>
+          <div class="border-top my-2"></div>
+          <small class="mb-0">
+            @if ($seller_inc > 0)
+              <span class="text-success">+{{ $seller_inc }} dari kemarin</span>
+            @else
+              <span class="text-warning">{{ $seller_inc }}</span>
+            @endif
+          </small>
+        </div>
+      </div>
+    </div>
   </div><!--end row-->
 
   <div class="row row-cols-1 row-cols-md-3">
@@ -119,7 +165,7 @@
         <div class="card-body">
           <div class="d-flex align-items-center">
             <div>
-                <p class="mb-0 text-secondary">Total Pengunjung IECC</p>
+                <p class="mb-0 text-secondary">Total Pembelian Tiket</p>
                 <h4 class="my-1">{{ $guests }}</h4>
                 @if ($guest_inc > 0)
                   <p class="mb-0 font-13 text-success"><i class="bi bi-caret-up-fill"></i> +{{ $guest_inc }} dari kemarin</p>
@@ -139,16 +185,16 @@
         <div class="card-body">
           <div class="d-flex align-items-center">
             <div>
-                <p class="mb-0 text-secondary">Total Exhibitor IECC</p>
-                <h4 class="my-1">{{ $exhibitors }}</h4>
-                @if ($exhibitor_inc > 0)
-                  <p class="mb-0 font-13 text-success"><i class="bi bi-caret-up-fill"></i> +{{ $exhibitor_inc }} dari kemarin</p>
+                <p class="mb-0 text-secondary">Bundle 3</p>
+                <h4 class="my-1">{{ $ticket_3 }}</h4>
+                @if ($ticket_3_inc > 0)
+                  <p class="mb-0 font-13 text-success"><i class="bi bi-caret-up-fill"></i> +{{ $ticket_3_inc }} pemesan dari kemarin</p>
                 @else
-                  <p class="mb-0 font-13 text-warning">{{ $exhibitor_inc }}</p>
+                  <p class="mb-0 font-13 text-warning">{{ $ticket_3_inc }}</p>
                 @endif
             </div>
             <div class="widget-icon-large bg-gradient-success text-white ms-auto">
-              <i class="bi bi-cast"></i>
+              <i class="bi bi-ticket-detailed"></i>
             </div>
           </div>
         </div>
@@ -159,16 +205,16 @@
         <div class="card-body">
           <div class="d-flex align-items-center">
             <div>
-                <p class="mb-0 text-secondary">Food & Beverage IECC</p>
-                <h4 class="my-1">{{ $sellers }}</h4>
-                @if ($seller_inc > 0)
-                  <p class="mb-0 font-13 text-success"><i class="bi bi-caret-up-fill"></i> +{{ $seller_inc }} dari kemarin</p>
+                <p class="mb-0 text-secondary">Bundle 2</p>
+                <h4 class="my-1">{{ $ticket_2 }}</h4>
+                @if ($ticket_2_inc > 0)
+                  <p class="mb-0 font-13 text-success"><i class="bi bi-caret-up-fill"></i> +{{ $ticket_2_inc }} pemesan dari kemarin</p>
                 @else
-                  <p class="mb-0 font-13 text-warning">{{ $seller_inc }}</p>
+                  <p class="mb-0 font-13 text-warning">{{ $ticket_2_inc }}</p>
                 @endif
             </div>
             <div class="widget-icon-large bg-gradient-info text-white ms-auto">
-              <i class="bi bi-shop"></i>
+              <i class="bi bi-ticket-perforated"></i>
             </div>
           </div>
         </div>

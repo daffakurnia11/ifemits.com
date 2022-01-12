@@ -34,12 +34,7 @@
     <div class="container about">
       <img src="/img/icon/event-cross.svg" class="about-icon" data-aos="zoom-in" data-aos-delay="500" alt="">
       <p class="about-content" data-aos="zoom-in">
-        IFEM Exhibition and Closing Ceremony merupakan sebuah Event yang dibuat oleh Teknik Mesin ITS dalam rangkaian
-        acara IFEM 2022. IFEM Exhibition and Closing Ceremony 2022 bertemakan Electric Vehicle. Acara ini sendiri
-        merupakan wadah untuk anak bangsa yang memiliki karya dalam bidang Electric Vehicle untuk memperkenalkan kepada
-        masyarakat khususnya di Wilayah Surabaya. IFEM Exhibition and Closing Ceremony berisikan pameran karya anak
-        bangsa dalam bidang Electric Vehicle, Talkshow, dan Closing Ceremony. Closing Ceremony pameran ini akan
-        dimeriahkan oleh Guest Star Ternama dan juga penampilan dari Mahasiswa ITS.
+        IFEM Exhibition and Closing Ceremony (IECC) merupakan rangkaian kegiatan penutup dari IFEM 2022 yang mengusung tema Electric Vehicle. Kegiatan ini merupakan wadah untuk anak bangsa memperkenalkan karya dalam bidang Electric Vehicle kepada masyarakat umum, khususnya di wilayah Surabaya. Kegiatan ini juga akan dimeriahkan oleh penampilan mahasiswa ITS dan Guest Star ternama. 
       </p>
     </div>
   </section>
@@ -64,10 +59,16 @@
             </p>
           </div>
         </div>
+        @if ($ticket < 300)
         <div class="col-md-5" data-aos="fade-right" data-aos-delay="500">
-          <a href="/iecc/registrasi" class="bundle-regis text-center mx-auto">Order</a>
+          <a href="/bundling/registrasi" class="bundle-regis text-center mx-auto">Order</a>
           <p class="bundle-notes text-center mt-2">only for the first 300 participants</p>
         </div>
+        @else
+        <div class="col-md-5" data-aos="fade-right" data-aos-delay="1000">
+          <h4 class="bundle-soon text-center mb-5">Bundle 3 closed</h4>
+        </div>
+        @endif
       </div>
       <div class="row align-items-center bundle-container mx-auto">
         <div class="col-md-7" data-aos="zoom-in" data-aos-delay="750">
@@ -79,9 +80,15 @@
             </p>
           </div>
         </div>
+        @if ($ticket >= 300)
+        <div class="col-md-5" data-aos="fade-right" data-aos-delay="500">
+          <a href="/bundling/registrasi" class="bundle-regis text-center mx-auto">Order</a>
+        </div>
+        @else
         <div class="col-md-5" data-aos="fade-right" data-aos-delay="1000">
           <h4 class="bundle-soon text-center mb-5">Coming Soon</h4>
         </div>
+        @endif
       </div>
       <img src="/img/icon/blue-ball.svg" class="bundle-icon1" alt="">
       <img src="/img/icon/four-hexa.svg" class="bundle-icon2" alt="">

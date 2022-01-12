@@ -19,7 +19,7 @@
   <link href="/css/admin/style.css" rel="stylesheet" />
   <link href="/css/admin/icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
   {{-- Swiper js --}}
   <link rel="stylesheet" href="/vendor/swiper/swiper-bundle.min.css">
 

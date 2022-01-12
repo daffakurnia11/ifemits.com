@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateExhGuestsTable extends Migration
+class CreateBundlesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateExhGuestsTable extends Migration
      */
     public function up()
     {
-        Schema::create('exh_guests', function (Blueprint $table) {
+        Schema::create('bundles', function (Blueprint $table) {
             $table->id();
             $table->string('register_code')->unique();
             $table->string('name');
@@ -21,6 +21,7 @@ class CreateExhGuestsTable extends Migration
             $table->integer('ticket')->default(1);
             $table->string('phone');
             $table->string('payment');
+            $table->integer('bundle');
             $table->softDeletes();
             $table->timestamps();
         });
@@ -33,6 +34,6 @@ class CreateExhGuestsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('exh_guests');
+        Schema::dropIfExists('bundles');
     }
 }

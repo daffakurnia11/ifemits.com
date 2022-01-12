@@ -42,8 +42,6 @@
         penasaran kan siapa aja speaker “IF-TALK” yang akan menemani teman-teman semua saat kegiatan talkshow
         berlangsung. Daripada makin penasaran, langsung aja cek speakers kita di bawah ini!
       </p>
-      <a href="/if-web/registrasi" class="register-button text-center d-block mx-auto" data-aos="fade-up"
-        data-aos-delay="500" data-aos-offset="0">Register Now!</a>
     </div>
   </section>
   <!-- End of About -->
@@ -109,10 +107,16 @@
             </p>
           </div>
         </div>
+        @if ($ticket < 300)
         <div class="col-md-5" data-aos="fade-right" data-aos-delay="500">
-          <a href="/iecc/registrasi" class="bundle-regis text-center mx-auto">Order</a>
+          <a href="/bundling/registrasi" class="bundle-regis text-center mx-auto">Order</a>
           <p class="bundle-notes text-center mt-2">only for the first 300 participants</p>
         </div>
+        @else
+        <div class="col-md-5" data-aos="fade-right" data-aos-delay="1000">
+          <h4 class="bundle-soon text-center mb-5">Bundle 3 closed</h4>
+        </div>
+        @endif
       </div>
       <div class="row align-items-center bundle-container mx-auto">
         <div class="col-md-7" data-aos="zoom-in" data-aos-delay="750">
@@ -124,9 +128,15 @@
             </p>
           </div>
         </div>
+        @if ($ticket >= 300)
+        <div class="col-md-5" data-aos="fade-right" data-aos-delay="500">
+          <a href="/bundling/registrasi" class="bundle-regis text-center mx-auto">Order</a>
+        </div>
+        @else
         <div class="col-md-5" data-aos="fade-right" data-aos-delay="1000">
           <h4 class="bundle-soon text-center mb-5">Coming Soon</h4>
         </div>
+        @endif
       </div>
       <img src="/img/icon/blue-ball.svg" class="bundle-icon1" alt="">
       <img src="/img/icon/four-hexa.svg" class="bundle-icon2" alt="">

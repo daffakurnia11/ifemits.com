@@ -60,11 +60,6 @@
         <div class="menu-title">IECC</div>
       </a>
       <ul class="mm-collapse {{ Request::is('admin/iecc**') ? 'mm-show' : '' }}" style="">
-        <li class="{{ Request::is('admin/iecc/pengunjung') ? 'mm-active' : '' }}"> 
-          <a href="/admin/iecc/pengunjung"><i class="bi bi-arrow-right-short"></i>
-            Pengunjung
-          </a>
-        </li>
         <li class="{{ Request::is('admin/iecc/exhibitor') ? 'mm-active' : '' }}"> 
           <a href="/admin/iecc/exhibitor"><i class="bi bi-arrow-right-short"></i>
             Exhibitor
@@ -82,6 +77,13 @@
         <div class="parent-icon"><i class="bi bi-building"></i>
         </div>
         <div class="menu-title">EFFECT</div>
+      </a>
+    </li>
+    <li class="{{ Request::is('admin/ticket') ? 'mm-active' : '' }}">
+      <a href="/admin/ticket">
+        <div class="parent-icon"><i class="bi bi-ticket-perforated"></i>
+        </div>
+        <div class="menu-title">Bundling Ticket</div>
       </a>
     </li>
 

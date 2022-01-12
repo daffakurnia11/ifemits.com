@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Exh_guest extends Model
+class Bundle extends Model
 {
     use HasFactory;
 
@@ -16,6 +16,7 @@ class Exh_guest extends Model
         'ticket',
         'phone',
         'payment',
+        'bundle'
     ];
 
     public function getRouteKeyName()

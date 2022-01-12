@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bundle;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -39,8 +40,14 @@ class PagesController extends Controller
     // IECC
     public function pameran_info()
     {
+        $tickets = Bundle::all();
+        $registered = 0;
+        foreach ($tickets as $ticket) {
+            $registered = $registered + $ticket->ticket;
+        }
         return view('main.iecc.index', [
-            'title' => 'IECC'
+            'title'     => 'IECC',
+            'ticket'    => $registered
         ]);
     }
     public function pameran_detail()
@@ -77,8 +84,14 @@ class PagesController extends Controller
     // IF-Talk
     public function talkshow_info()
     {
+        $tickets = Bundle::all();
+        $registered = 0;
+        foreach ($tickets as $ticket) {
+            $registered = $registered + $ticket->ticket;
+        }
         return view('main.if-talk.index', [
-            'title' => 'IF-Talk 2022'
+            'title'     => 'IF-Talk 2022',
+            'ticket'    => $registered
         ]);
     }
 

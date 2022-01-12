@@ -197,6 +197,7 @@ return [
         'team'              => 'Nama kelompok/tim',
         'collage'           => 'Perguruan tinggi',
         'proposal'          => 'Proposal',
+        'ticket'            => 'Jumlah tiket',
         // Admin
         'original'          => 'URL asli',
         'short'             => 'Short link',

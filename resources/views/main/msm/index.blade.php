@@ -34,14 +34,7 @@
     <div class="container about">
       <img src="/img/icon/event-cross.svg" class="about-icon" data-aos="zoom-in" data-aos-delay="500" alt="">
       <p class="about-content" data-aos="zoom-in">
-        Mechanical Science Marathon atau MSM merupakan salah satu kompetisi dalam IFEM 2022 yang didasarkan pada
-        kompetisi bidang Fisika Mekanik untuk seluruh siswa sekolah menengah atas di Indonesia. Dalam Mechanical Science
-        Marathon Peserta berada dalam satu tim dan tim tersebut beranggotakan tiga orang di sekolah yang sama.
-        Mechanical Science Marathon memiliki tiga fase yaitu penyisihan pertama, semifinal, dan final. Pada tahap
-        eliminasi pertama tim akan menyelesaikan tes yang berisi materi matematika, fisika, kimia dan mekanika dasar.
-        Kemudian, pada babak semifinal berbentuk seperti rally case dan tim akan menyelesaikan semua kasus di industri
-        mekanik dengan waktu yang terbatas. Dan terakhir pada tahap akhir berbentuk kuis atau “cerdas cermat” dalam
-        bahasa Indonesia.
+        Mechanical Science Marathon (MSM) merupakan salah satu kompetisi untuk seluruh siswa/i SMA/SMK sederajat se-Indonesia yang terdiri dari 3 orang dalam satu tim.  Kompetisi ini mengusung tema “Become a Strong Root in the Face of the World's Defiance with Technology”, dimana terdapat tiga tahap kompetisi yaitu penyisihan, semifinal, dan final.
       </p>
     </div>
   </section>

@@ -18,11 +18,16 @@
   <div class="container form">
     <div class="row align-items-center">
       <div class="col-lg-6 form-name d-flex flex-column justify-content-center">
-        <h1 class="form-title text-center" data-aos="zoom-in">IECC</h1>
-        <p class="form-subtitle text-center mx-auto" data-aos="zoom-in" data-aos-delay="250">Pengunjung</p>
+        @if ($register < 300)
+        <h1 class="form-title text-center" data-aos="zoom-in">BUNDLE 3</h1>
+        <p class="form-subtitle text-center mx-auto" data-aos="zoom-in" data-aos-delay="250">Talkshow + Pameran + Closing Party</p>
+        @else
+        <h1 class="form-title text-center" data-aos="zoom-in">BUNDLE 2</h1>
+        <p class="form-subtitle text-center mx-auto" data-aos="zoom-in" data-aos-delay="250">Talkshow + Closing Party</p>
+        @endif
       </div>
       <div class="col-lg-6">
-        <form action="/iecc/registrasi" method="POST" class="form-container my-5" enctype="multipart/form-data" data-aos="zoom-in" data-aos-delay="500">
+        <form action="/bundling/registrasi" method="POST" class="form-container my-5" enctype="multipart/form-data" data-aos="zoom-in" data-aos-delay="500">
           @csrf
           <h2 class="form-head mb-4">Registrasi</h2>
           <div class="row">
@@ -51,7 +56,7 @@
             <div class="col-lg-12 col-xxl-6 col-md-6">
               <div class="mt-3">
                 <label for="ticket" class="form-label">Jumlah Tiket</label>
-                <input type="number" value="{{ old('ticket') }}" name="ticket" class="form-control @error('ticket') is-invalid @enderror" id="ticket" min="1" value="1" tabindex="3">
+                <input type="number" value="{{ old('ticket') }}" name="ticket" class="form-control @error('ticket') is-invalid @enderror" id="ticket" min="1" max="{{ $ticket }}" value="1" tabindex="3">
                 @error('ticket')
                 <div class="invalid-feedback mt-2">
                   <p class="mb-0">{{ $message }}</p>

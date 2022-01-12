@@ -49,9 +49,9 @@
               <td class="align-middle">{{ $data->phone }}</td>
               <td class="align-middle text-center">{{ $data->age }}</td>
               <td class="align-middle text-center">
-                <a href="/admin/iecc/{{ $data->register_code }}" class="btn btn-sm text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Detail"><i class="bi bi-eye"></i></a>
+                <a href="/admin/if-web/{{ $data->register_code }}" class="btn btn-sm text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Detail"><i class="bi bi-eye"></i></a>
                 
-                <form action="/admin/iecc/{{ $data->register_code }}" method="POST" class="d-inline">
+                <form action="/admin/if-web/{{ $data->register_code }}" method="POST" class="d-inline">
                   @csrf
                   @method('DELETE')
                   <button type="submit" class="btn btn-sm text-danger deleteButton" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Hapus" onclick="return confirm('Data akan dihapus, lanjutkan?')"><i class="bi bi-trash"></i></button>

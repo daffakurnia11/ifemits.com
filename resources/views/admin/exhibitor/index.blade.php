@@ -53,9 +53,9 @@
               <td class="align-middle text-nowrap">{{ $data->vehicle }}</td>
               <td class="align-middle text-wrap">{{ $data->address }}</td>
               <td class="align-middle">
-                <a href="/admin/exhibitor/{{ $data->register_code }}" class="btn btn-sm text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Detail"><i class="bi bi-eye"></i></a>
+                <a href="/admin/iecc/exhibitor/{{ $data->register_code }}" class="btn btn-sm text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Detail"><i class="bi bi-eye"></i></a>
                 
-                <form action="/admin/exhibitor/{{ $data->register_code }}" method="POST" class="d-inline">
+                <form action="/admin/iecc/exhibitor/{{ $data->register_code }}" method="POST" class="d-inline">
                   @csrf
                   @method('DELETE')
                   <button type="submit" class="btn btn-sm text-danger deleteButton" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Hapus" onclick="return confirm('Data akan dihapus, lanjutkan?')"><i class="bi bi-trash"></i></button>

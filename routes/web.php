@@ -89,7 +89,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
   ])->except(['create', 'store', 'edit', 'update']);
   // MSM
   Route::resource('msm', CompetitionController::class)->parameters([
-    'msm', 'competition'
+    'msm' => 'competition'
   ])->except(['create', 'store', 'edit', 'update']);
   // IECC
   Route::prefix('iecc')->group(function () {

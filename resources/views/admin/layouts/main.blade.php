@@ -29,7 +29,7 @@
   <link href="/css/admin/semi-dark.css" rel="stylesheet" />
   <link href="/css/admin/header-colors.css" rel="stylesheet" />
 
-  <title>EPC - EPW 2022 | {{ $title }}</title>
+  <title>{{ $title }} - IFEM Admin</title>
 </head>
 
 <body>

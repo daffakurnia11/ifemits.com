@@ -977,9 +977,15 @@ canvas {
   box-shadow: 0px 0px 10px #ffffff;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
   .register-button {
     font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .register-button {
+    font-size: 1.5rem;
     padding: 1rem;
   }
 }
@@ -1043,11 +1049,17 @@ canvas {
   border: 4px solid transparent;
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: 500;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-size: 0.9rem;
+  line-height: 1.25rem;
   text-align: justify;
   color: #ffffff;
   padding: 4.5rem;
+}
+
+@media screen and (max-width: 992px) {
+  #eventAbout .about-content {
+    padding: 3.5rem;
+  }
 }
 
 #eventAbout .about-icon {
@@ -1056,6 +1068,35 @@ canvas {
   left: 0;
   transform: translate(-40%, -40%);
   z-index: 2;
+  width: 123px;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  #eventAbout .about {
+    margin: 1rem 2rem;
+  }
+}
+
+#eventAbout .event-pict {
+  display: block;
+  margin: auto;
+  width: 375px;
+  max-width: 100%;
+  filter: drop-shadow(0px 24px 8px rgba(0, 0, 0, 0.45));
+}
+
+@media screen and (max-width: 768px) {
+  #eventAbout .event-pict {
+    padding: 6em 0 2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #eventAbout .event-pict {
+    width: 250px;
+    max-width: 100%;
+  }
 }
 
 #eventTopic {
@@ -1120,8 +1161,7 @@ canvas {
 #eventTopic .topic-content .topic-desc {
   margin-bottom: 0;
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 1.25rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-align: center;
   letter-spacing: 0.07em;
   color: #ffffff;
@@ -1734,9 +1774,6 @@ canvas {
   #eventHeader .header-subtitle {
     font-size: 1rem;
     padding: 1rem 1rem;
-  }
-  #eventAbout .about {
-    margin: 5rem 2rem;
   }
   #eventAbout .about-content {
     font-size: 1rem;

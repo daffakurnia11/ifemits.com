@@ -32,17 +32,26 @@
 
   <!-- About -->
   <section id="eventAbout">
-    <div class="container about">
-      <img src="/img/icon/event-cross.svg" class="about-icon" data-aos="zoom-in" data-aos-delay="500" alt="">
-      <p class="about-content" data-aos="zoom-in">
-        Electric Formula Competition (EFFECT) merupakan kompetisi yang didasarkan pada desain formula elektrik untuk
-        seluruh mahasiswa S1/D4 di Indonesia dengan maksimal lima anggota dan satu dosen di universitas yang sama dalam
-        satu tim. Pada tahun ini EFFECT mengusung tema “Developing Indonesian Youth Contribution for the Future
-        Development of Eco-Friendly Vehicles through Innovative and Applicable Electric Formula Car Designs”, dengan
-        memiliki dua tahap kompetisi, yaitu tahap pengajuan proposal dan tahap final atau presentasi.
-      </p>
-      <a href="/if-web/registrasi" class="guidebook-button text-center d-block mx-auto" data-aos="fade-up"
-        data-aos-delay="500" data-aos-offset="0">Guidebook</a>
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-7 col-lg-7 col-xl-6 order-2 order-md-1">
+          <div class="about">
+            <img src="/img/icon/event-cross.png" class="about-icon" data-aos="zoom-in" data-aos-delay="500" alt="">
+            <p class="about-content" data-aos="zoom-in">
+              Electric Formula Competition (EFFECT) merupakan kompetisi yang didasarkan pada desain formula elektrik untuk
+              seluruh mahasiswa S1/D4 di Indonesia dengan maksimal lima anggota dan satu dosen di universitas yang sama dalam
+              satu tim. Pada tahun ini EFFECT mengusung tema “Developing Indonesian Youth Contribution for the Future
+              Development of Eco-Friendly Vehicles through Innovative and Applicable Electric Formula Car Designs”, dengan
+              memiliki dua tahap kompetisi, yaitu tahap pengajuan proposal dan tahap final atau presentasi.
+            </p>
+            <a href="/if-web/registrasi" class="guidebook-button text-center d-block mx-auto" data-aos="fade-up"
+              data-aos-delay="500" data-aos-offset="0">Guidebook</a>
+          </div>
+        </div>
+        <div class="col-md-5 col-lg-5 col-xl-4 order-1 order-md-2">
+          <img src="/img/EFFECT2.png" class="event-pict" alt="" data-aos="zoom-in" data-aos-delay="750">
+        </div>
+      </div>
     </div>
   </section>
   <!-- End of About -->

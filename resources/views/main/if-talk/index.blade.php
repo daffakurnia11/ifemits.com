@@ -34,7 +34,7 @@
   <!-- About -->
   <section id="eventAbout">
     <div class="container about">
-      <img src="/img/icon/event-cross.svg" class="about-icon" data-aos="zoom-in" data-aos-delay="500" alt="">
+      <img src="/img/icon/event-cross.png" class="about-icon" data-aos="zoom-in" data-aos-delay="500" alt="">
       <p class="about-content" data-aos="zoom-in">
         IF-TALK merupakan kegiatan talkshow yang merupakan bagian dari rangkaian acara IFEM 2022. Tema yang diusung pada
         “IF-TALK” adalah tentang “Kesiapan Indonesia dalam Pengembangan Teknologi EV”. Pada IF-TALK ini akan mengundang

@@ -31,11 +31,20 @@
 
   <!-- About -->
   <section id="eventAbout">
-    <div class="container about">
-      <img src="/img/icon/event-cross.svg" class="about-icon" data-aos="zoom-in" data-aos-delay="500" alt="">
-      <p class="about-content" data-aos="zoom-in">
-        Mechanical Science Marathon (MSM) merupakan salah satu kompetisi untuk seluruh siswa/i SMA/SMK sederajat se-Indonesia yang terdiri dari 3 orang dalam satu tim.  Kompetisi ini mengusung tema “Become a Strong Root in the Face of the World's Defiance with Technology”, dimana terdapat tiga tahap kompetisi yaitu penyisihan, semifinal, dan final.
-      </p>
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-7 col-lg-7 col-xl-6 order-2 order-md-1">
+          <div class="about">
+            <img src="/img/icon/event-cross.png" class="about-icon" data-aos="zoom-in" data-aos-delay="500" alt="">
+            <p class="about-content" data-aos="zoom-in">
+              Mechanical Science Marathon (MSM) merupakan salah satu kompetisi untuk seluruh siswa/i SMA/SMK sederajat se-Indonesia yang terdiri dari 3 orang dalam satu tim.  Kompetisi ini mengusung tema “Become a Strong Root in the Face of the World's Defiance with Technology”, dimana terdapat tiga tahap kompetisi yaitu penyisihan, semifinal, dan final.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-5 col-lg-5 col-xl-4 order-1 order-md-2">
+          <img src="/img/MSM2.png" class="event-pict" alt="" data-aos="zoom-in" data-aos-delay="750">
+        </div>
+      </div>
     </div>
   </section>
   <!-- End of About -->

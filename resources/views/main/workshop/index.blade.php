@@ -34,7 +34,7 @@
   <!-- About -->
   <section id="eventAbout">
     <div class="container about">
-      <img src="/img/icon/event-cross.svg" class="about-icon" data-aos="zoom-in" data-aos-delay="500" alt="">
+      <img src="/img/icon/event-cross.png" class="about-icon" data-aos="zoom-in" data-aos-delay="500" alt="">
       <p class="about-content" data-aos="zoom-in">
         Workshop merupakan pelatihan desain berbasis Auto-Cad, yang akan diikuti oleh semifinalis Mechanical Science
         Marathon. Pada workshop tahun ini, IFEM mendapat kesempatan untuk bekerjasama dengan salah satu lembaga

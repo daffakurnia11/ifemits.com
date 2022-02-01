@@ -78,37 +78,37 @@
         <div class="col-lg-4 col-6 my-3" data-aos="fade-up" data-aos-delay="250">
           <a href="/effect" class="event-list d-flex justify-content-center align-items-center mx-auto">
             <img src="/img/icon/landing-event-triangle.svg" class="list-triangle mx-auto" alt="">
-            <h3 class="list-title">Rancang Bangun</h3>
+            <h3 class="list-title">EFFECT</h3>
           </a>
         </div>
         <div class="col-lg-4 col-6 my-3" data-aos="fade-up" data-aos-delay="500">
           <a href="/msm" class="event-list d-flex justify-content-center align-items-center mx-auto">
             <img src="/img/icon/landing-event-triangle.svg" class="list-triangle mx-auto" alt="">
-            <h3 class="list-title">Case Competition</h3>
+            <h3 class="list-title">MSM</h3>
           </a>
         </div>
         <div class="col-lg-4 col-6 my-3" data-aos="fade-up" data-aos-delay="750">
           <a href="/if-web" class="event-list d-flex justify-content-center align-items-center mx-auto">
             <img src="/img/icon/landing-event-triangle.svg" class="list-triangle mx-auto" alt="">
-            <h3 class="list-title">Webinar</h3>
+            <h3 class="list-title">IF-WEB</h3>
           </a>
         </div>
         <div class="col-lg-4 col-6 my-3" data-aos="fade-up" data-aos-delay="1000" data-aos-offset="0">
           <a href="/if-talk" class="event-list d-flex justify-content-center align-items-center mx-auto">
             <img src="/img/icon/landing-event-triangle.svg" class="list-triangle mx-auto" alt="">
-            <h3 class="list-title">Talkshow</h3>
+            <h3 class="list-title">IF-TALK</h3>
           </a>
         </div>
         <div class="col-lg-4 col-6 my-3" data-aos="fade-up" data-aos-delay="1250" data-aos-offset="0">
           <a href="/workshop" class="event-list d-flex justify-content-center align-items-center mx-auto">
             <img src="/img/icon/landing-event-triangle.svg" class="list-triangle mx-auto" alt="">
-            <h3 class="list-title">Workshop</h3>
+            <h3 class="list-title">WORKSHOP</h3>
           </a>
         </div>
         <div class="col-lg-4 col-6 my-3" data-aos="fade-up" data-aos-delay="1500" data-aos-offset="0">
           <a href="/iecc" class="event-list d-flex justify-content-center align-items-center mx-auto">
             <img src="/img/icon/landing-event-triangle.svg" class="list-triangle mx-auto" alt="">
-            <h3 class="list-title">Pameran</h3>
+            <h3 class="list-title">IECC</h3>
           </a>
         </div>
       </div>

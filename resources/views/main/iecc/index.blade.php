@@ -31,11 +31,20 @@
 
   <!-- About -->
   <section id="eventAbout">
-    <div class="container about">
-      <img src="/img/icon/event-cross.svg" class="about-icon" data-aos="zoom-in" data-aos-delay="500" alt="">
-      <p class="about-content" data-aos="zoom-in">
-        IFEM Exhibition and Closing Ceremony (IECC) merupakan rangkaian kegiatan penutup dari IFEM 2022 yang mengusung tema Electric Vehicle. Kegiatan ini merupakan wadah untuk anak bangsa memperkenalkan karya dalam bidang Electric Vehicle kepada masyarakat umum, khususnya di wilayah Surabaya. Kegiatan ini juga akan dimeriahkan oleh penampilan mahasiswa ITS dan Guest Star ternama. 
-      </p>
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-7 col-lg-7 col-xl-6 order-2 order-md-1">
+          <div class="about">
+            <img src="/img/icon/event-cross.png" class="about-icon" data-aos="zoom-in" data-aos-delay="500" alt="">
+            <p class="about-content" data-aos="zoom-in">
+              IFEM Exhibition and Closing Ceremony (IECC) merupakan rangkaian kegiatan penutup dari IFEM 2022 yang mengusung tema Electric Vehicle. Kegiatan ini merupakan wadah untuk anak bangsa memperkenalkan karya dalam bidang Electric Vehicle kepada masyarakat umum, khususnya di wilayah Surabaya. Kegiatan ini juga akan dimeriahkan oleh penampilan mahasiswa ITS dan Guest Star ternama. 
+            </p>
+          </div>
+        </div>
+        <div class="col-md-5 col-lg-5 col-xl-4 order-1 order-md-2">
+          <img src="/img/IECC2.png" class="event-pict" alt="" data-aos="zoom-in" data-aos-delay="750">
+        </div>
+      </div>
     </div>
   </section>
   <!-- End of About -->

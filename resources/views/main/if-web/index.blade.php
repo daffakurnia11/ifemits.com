@@ -31,12 +31,21 @@
 
   <!-- About -->
   <section id="eventAbout">
-    <div class="container about">
-      <img src="/img/icon/event-cross.svg" class="about-icon" data-aos="zoom-in" data-aos-delay="500" alt="">
-      <p class="about-content" data-aos="zoom-in">
-        IF-WEB merupakan rangkaian kegiatan pembuka dari IFEM 2022. Pada kegiatan webinar kali ini mengusung tema “<strong><em>Potensi Mobil Listrik di Indonesia</em></strong>”, dimana akan dihadirkan pembicara dari pihak dosen Departemen Teknik Mesin FT-IRS ITS, seseorang yang ahli dalam bidang industri EV dan bidang kompetisi mobil listrik di Indonesia.
-      </p>
-      <a href="/if-web/registrasi" class="register-button text-center d-block mx-auto" data-aos="fade-up" data-aos-delay="500" data-aos-offset="0">Register Now!</a>
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-7 col-lg-7 col-xl-6 order-2 order-md-1">
+          <div class="about">
+            <img src="/img/icon/event-cross.png" class="about-icon" data-aos="zoom-in" data-aos-delay="500" alt="">
+            <p class="about-content" data-aos="zoom-in">
+              IF-WEB merupakan rangkaian kegiatan pembuka dari IFEM 2022. Pada kegiatan webinar kali ini mengusung tema “<strong><em>Potensi Mobil Listrik di Indonesia</em></strong>”, dimana akan dihadirkan pembicara dari pihak dosen Departemen Teknik Mesin FT-IRS ITS, seseorang yang ahli dalam bidang industri EV dan bidang kompetisi mobil listrik di Indonesia.
+            </p>
+            <a href="/if-web/registrasi" class="register-button text-center d-block mx-auto" data-aos="fade-up" data-aos-delay="500" data-aos-offset="0">Register Now!</a>
+          </div>
+        </div>
+        <div class="col-md-5 col-lg-5 col-xl-4 order-1 order-md-2">
+          <img src="/img/WEBINAR2.png" class="event-pict" alt="" data-aos="zoom-in" data-aos-delay="750">
+        </div>
+      </div>
     </div>
   </section>
   <!-- End of About -->

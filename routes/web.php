@@ -73,6 +73,8 @@ Route::middleware('visited')->group(function () {
   Route::prefix('workshop')->group(function () {
     Route::get('/', [PagesController::class, 'workshop_info']);
   });
+
+  Route::get('/merchandise', [PagesController::class, 'merchandise']);
 });
 
 // Admin Routing

@@ -102,4 +102,12 @@ class PagesController extends Controller
             'title' => 'Workshop'
         ]);
     }
+
+    // Merchandise
+    public function merchandise()
+    {
+        return view('main.merchandise', [
+            'title' => 'Merchandise'
+        ]);
+    }
 }

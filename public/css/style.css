@@ -634,7 +634,7 @@ canvas {
 
 .team .arrow-title {
   margin-top: 3rem;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .team .arrow-title-text {
@@ -1108,7 +1108,7 @@ canvas {
 
 #eventTopic .topic .arrow-title {
   margin-top: 3rem;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 #eventTopic .topic .arrow-title-text {
@@ -1250,7 +1250,7 @@ canvas {
 
 #eventSpeaker .speaker .arrow-title {
   margin-top: 3rem;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 #eventSpeaker .speaker .arrow-title-text {
@@ -1370,7 +1370,7 @@ canvas {
 
 #eventPrize .prize .arrow-title {
   margin-top: 3rem;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 #eventPrize .prize .arrow-title-text {
@@ -1479,7 +1479,7 @@ canvas {
 
 #eventBundle .arrow-title {
   margin-top: 3rem;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 #eventBundle .arrow-title-text {
@@ -1700,7 +1700,7 @@ canvas {
 
 #eventRegister .arrow-title {
   margin-top: 3rem;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 #eventRegister .arrow-title-text {
@@ -2009,6 +2009,270 @@ canvas {
 
 #eventForm .form-container .form-submit:hover {
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 10px #ffffff;
+}
+
+#merchHeader {
+  min-height: calc(100vh - 100px);
+}
+
+#merchHeader .header {
+  position: relative;
+  z-index: 2;
+}
+
+#merchHeader .header-title {
+  font: 5rem/5rem "Mova";
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  text-shadow: 0px 0px 10px #ffffff;
+  text-transform: uppercase;
+}
+
+#merchHeader .header-title span {
+  text-transform: uppercase;
+  font: 4.5rem/4.5rem "Mova";
+}
+
+@media screen and (max-width: 768px) {
+  #merchHeader .header-title {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  #merchHeader .header-title span {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 349px) {
+  #merchHeader .header-title {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  #merchHeader .header-title span {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+}
+
+#merchHeader .header-arrow {
+  width: 215px;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  #merchHeader .header-arrow {
+    width: 125px;
+  }
+}
+
+#merchHeader .blue-ball {
+  width: 330px;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  #merchHeader .blue-ball {
+    width: 220px;
+  }
+}
+
+#merchHeader .outlined-ball {
+  position: absolute;
+  right: -4rem;
+  top: 0;
+  width: 330px;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  #merchHeader .outlined-ball {
+    width: 220px;
+  }
+}
+
+#merchCatalog {
+  position: relative;
+  overflow: hidden;
+}
+
+#merchCatalog #catalog .catalog-button {
+  width: 210px;
+  max-width: 100%;
+  border: none;
+  background-color: transparent;
+  background: linear-gradient(140deg, #000c30, #000c30) padding-box, linear-gradient(140deg, #3e5ca9 30%, #fc607e) border-box;
+  border-radius: 1.75rem;
+  border: 4px solid transparent;
+  border: 3px solid transparent !important;
+  border-radius: 3rem !important;
+  font: bold 1rem/1.25rem "Montserrat Alternates", sans-serif;
+  letter-spacing: -0.06em;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+#merchCatalog #catalog .catalog-button:not(.collapsed) {
+  filter: drop-shadow(0px 0px 4px #ffffff);
+}
+
+#merchCatalog #catalog .catalog-container {
+  width: 850px;
+  max-width: 100%;
+  height: 450px;
+  background: linear-gradient(90deg, rgba(78, 72, 156, 0.5) 0%, rgba(30, 38, 92, 0.5) 100%);
+  box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.39);
+  border-radius: 1.25rem;
+}
+
+#merchCatalog #catalog .catalog-container .catalog-name {
+  font: bold 2.25rem/2.25rem "Montserrat Alternates", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+#merchCatalog #catalog .catalog-container .catalog-photo {
+  max-width: 300px;
+  max-height: 250px;
+}
+
+#merchCatalog #catalog .catalog-container .catalog-price {
+  font: bold 1.5rem/2rem "Montserrat Alternates", sans-serif;
+  color: #ffffff;
+}
+
+#merchCatalog .catalog-bg {
+  position: absolute;
+  top: 0;
+  right: -150px;
+  z-index: -1;
+}
+
+#merchBundle .bundle {
+  position: relative;
+}
+
+#merchBundle .bundle-bg {
+  position: absolute;
+  top: 25%;
+  width: 250px;
+  max-width: 100%;
+  right: 0;
+  z-index: -1;
+}
+
+#merchBundle .bundle .arrow-title {
+  margin-top: 3rem;
+  overflow: hidden;
+}
+
+#merchBundle .bundle .arrow-title-text {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 992px) {
+  #merchBundle .bundle .arrow-title-left, #merchBundle .bundle .arrow-title-right {
+    width: 170px;
+  }
+  #merchBundle .bundle .arrow-title-text {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #merchBundle .bundle .arrow-title-left, #merchBundle .bundle .arrow-title-right {
+    width: 90px;
+  }
+  #merchBundle .bundle .arrow-title-text {
+    font-size: 1.5rem;
+  }
+}
+
+#merchBundle .bundle-container {
+  width: 100%;
+  background: linear-gradient(90deg, rgba(78, 72, 156, 0.5) 0%, rgba(30, 38, 92, 0.5) 100%);
+  box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.39);
+  border-radius: 1.25rem;
+  padding: 2rem;
+}
+
+#merchBundle .bundle-container .bundle-picture {
+  height: 300px;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  #merchBundle .bundle-container .bundle-picture {
+    height: 100%;
+  }
+}
+
+#merchBundle .bundle-container .bundle-picture .bundle-img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#merchBundle .bundle-container .bundle-name {
+  font: bold 2.25rem/2.25rem "Montserrat Alternates", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 576px) {
+  #merchBundle .bundle-container .bundle-name {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+}
+
+#merchBundle .bundle-container .bundle-price {
+  font: bold 1.5rem/2rem "Montserrat Alternates", sans-serif;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 576px) {
+  #merchBundle .bundle-container .bundle-price {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+#merchBundle .bundle-container .bundle-desc {
+  font: 500 1.15rem/1.5rem "Montserrat Alternates", sans-serif;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 576px) {
+  #merchBundle .bundle-container .bundle-desc {
+    font-size: 1rem;
+  }
+}
+
+#merchBundle .bundle-button {
+  background: linear-gradient(140deg, #000c30, #000c30) padding-box, linear-gradient(140deg, #3e5ca9 30%, #fc607e) border-box;
+  border-radius: 1.75rem;
+  border: 4px solid transparent;
+  margin-top: 3rem;
+  max-width: 500px;
+  padding: 1rem 0;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  text-align: center;
+  color: #ffffff;
+  transition: ease-in-out 0.3s;
+}
+
+#merchBundle .bundle-button:hover {
+  color: #ffffff;
+  text-shadow: 0px 0px 10px #ffffff;
   box-shadow: 0px 0px 10px #ffffff;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,192 @@
+#merchHeader {
+    min-height: calc(100vh - 100px);
+    .header {
+        position: relative;
+        z-index: 2;
+        &-title {
+            font: 5rem/5rem $font-mova;
+            letter-spacing: 0.04em;
+            color: $color-white;
+            text-shadow: 0px 0px 10px $color-white;
+            text-transform: uppercase;
+            span {
+                text-transform: uppercase;
+                font: 4.5rem/4.5rem $font-mova;
+            }
+            @media screen and (max-width: 768px) {
+                font-size: 3rem;
+                line-height: 3rem;
+                span {
+                    font-size: 2.5rem;
+                    line-height: 2.5rem;
+                }
+            }
+            @media screen and (max-width: 349px) {
+                font-size: 2rem;
+                line-height: 2rem;
+                span {
+                    font-size: 1.5rem;
+                    line-height: 1.5rem;
+                }
+            }
+        }
+        &-arrow {
+            width: 215px;
+            max-width: 100%;
+            @media screen and (max-width: 576px) {
+                width: 125px;
+            }
+        }
+    }
+    .blue-ball {
+        width: 330px;
+        max-width: 100%;
+        @media screen and (max-width: 768px) {
+            width: 220px;
+        }
+    }
+    .outlined-ball {
+        position: absolute;
+        right: -4rem;
+        top: 0;
+        width: 330px;
+        max-width: 100%;
+        @media screen and (max-width: 768px) {
+            width: 220px;
+        }
+    }
+}
+
+#merchCatalog {
+    position: relative;
+    overflow: hidden;
+    #catalog {
+        .catalog-button {
+            width: 210px;
+            max-width: 100%;
+            border: none;
+            background-color: transparent;
+            @include border-rounded-gradient();
+            border: 3px solid transparent !important;
+            border-radius: 3rem !important;
+            font: bold 1rem/1.25rem $font-alternates;
+            letter-spacing: -0.06em;
+            color: $color-white;
+            text-transform: uppercase;
+            padding: 1rem;
+        }
+        .catalog-button:not(.collapsed) {
+            filter: drop-shadow(0px 0px 4px #ffffff);
+        }
+        .catalog-container {
+            width: 850px;
+            max-width: 100%;
+            height: 450px;
+            background: linear-gradient(
+                90deg,
+                rgba(78, 72, 156, 0.5) 0%,
+                rgba(30, 38, 92, 0.5) 100%
+            );
+            box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.39);
+            border-radius: 1.25rem;
+            .catalog-name {
+                font: bold 2.25rem/2.25rem $font-alternates;
+                color: $color-white;
+                text-transform: uppercase;
+            }
+            .catalog-photo {
+                max-width: 300px;
+                max-height: 250px;
+            }
+            .catalog-price {
+                font: bold 1.5rem/2rem $font-alternates;
+                color: $color-white;
+            }
+        }
+    }
+    .catalog-bg {
+        position: absolute;
+        top: 0;
+        right: -150px;
+        z-index: -1;
+    }
+}
+
+#merchBundle {
+    .bundle {
+        position: relative;
+        &-bg {
+            position: absolute;
+            top: 25%;
+            width: 250px;
+            max-width: 100%;
+            right: 0;
+            z-index: -1;
+        }
+        @include arrow-title();
+        &-container {
+            width: 100%;
+            background: linear-gradient(
+                90deg,
+                rgba(78, 72, 156, 0.5) 0%,
+                rgba(30, 38, 92, 0.5) 100%
+            );
+            box-shadow: 0px 0px 8px 3px rgba(255, 255, 255, 0.39);
+            border-radius: 1.25rem;
+            padding: 2rem;
+            .bundle-picture {
+                height: 300px;
+                width: 100%;
+                @media screen and (max-width: 768px) {
+                    height: 100%;
+                }
+                .bundle-img {
+                    max-height: 100%;
+                    max-width: 100%;
+                }
+            }
+            .bundle-name {
+                font: bold 2.25rem/2.25rem $font-alternates;
+                color: $color-white;
+                text-transform: uppercase;
+                @media screen and (max-width: 576px) {
+                    font-size: 1.5rem;
+                    line-height: 1.5rem;
+                }
+            }
+            .bundle-price {
+                font: bold 1.5rem/2rem $font-alternates;
+                color: $color-white;
+                @media screen and (max-width: 576px) {
+                    font-size: 1.25rem;
+                    line-height: 1.5rem;
+                }
+            }
+            .bundle-desc {
+                font: 500 1.15rem/1.5rem $font-alternates;
+                color: $color-white;
+                @media screen and (max-width: 576px) {
+                    font-size: 1rem;
+                }
+            }
+        }
+        &-button {
+            @include border-rounded-gradient();
+            margin-top: 3rem;
+            max-width: 500px;
+            padding: 1rem 0;
+            font-family: $font-alternates;
+            font-weight: 800;
+            font-size: 1.5rem;
+            line-height: 1.75rem;
+            text-align: center;
+            color: $color-white;
+            transition: ease-in-out 0.3s;
+            &:hover {
+                color: $color-white;
+                text-shadow: 0px 0px 10px $color-white;
+                box-shadow: 0px 0px 10px $color-white;
+            }
+        }
+    }
+}

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Bundle;
 use App\Models\Competition;
+use App\Models\Event_setting;
 use App\Models\Exh_exhibitor;
 use App\Models\Exh_seller;
 use App\Models\Shortlink;
@@ -15,6 +16,7 @@ use Carbon\CarbonInterval;
 use Carbon\CarbonPeriod;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class AdminController extends Controller
 {
@@ -127,5 +129,21 @@ class AdminController extends Controller
             'ticket_2'          => $ticket_2,
             'ticket_2_inc'      => Bundle::where('bundle', 2)->whereDate('created_at', Carbon::today())->count(),
         ]);
+    }
+
+    public function event_setting(Request $request, Event_setting $event_setting)
+    {
+        $validator = Validator::make($request->all(), [
+            'form_open'     => 'required',
+            'form_closed'   => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            return back()->with('notif', 'Settings not applied');
+        }
+
+        $event_setting->update($request->all());
+
+        return back()->with('notif', 'Settings applied');
     }
 }

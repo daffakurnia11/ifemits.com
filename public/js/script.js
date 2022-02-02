@@ -2,6 +2,16 @@ const flashdata = $('#flash-data').data('flashdata');
 const notif = $('#notification').data('flashdata');
 
 $(function () {
+  "use strict";
+  $('#datetimeOpen').bootstrapMaterialDatePicker({
+    format: 'YYYY-MM-DD HH:mm'
+  });
+  $('#datetimeClosed').bootstrapMaterialDatePicker({
+    format: 'YYYY-MM-DD HH:mm'
+  });
+});
+
+$(function () {
   $('#scrollToTop').on('click', function () {
     $(window).scrollTop(0);
   })
@@ -228,6 +238,24 @@ if (notif) {
       position: 'top right',
       icon: 'bx bx-check-circle',
       msg: 'Data berhasil dihapus!'
+    });
+  }
+  if (notif == "Settings applied") {
+    Lobibox.notify('success', {
+      pauseDelayOnHover: true,
+      continueDelayOnInactiveTab: false,
+      position: 'top right',
+      icon: 'bx bx-check-circle',
+      msg: 'Pengaturan berhasil diubah!'
+    });
+  }
+  if (notif == "Settings not applied") {
+    Lobibox.notify('warning', {
+      pauseDelayOnHover: true,
+      continueDelayOnInactiveTab: false,
+      position: 'top right',
+      icon: 'bx bx-check-circle',
+      msg: 'Pengaturan gagal diubah!'
     });
   }
 }

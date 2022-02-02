@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Effect;
 use App\Models\Effect_team;
+use App\Models\Event_setting;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class EffectController extends Controller
@@ -18,7 +20,8 @@ class EffectController extends Controller
     {
         return view('admin.effect.index', [
             'title'     => 'Data Pendaftar EFFECT',
-            'datas'     => Effect::latest()->get()
+            'datas'     => Effect::latest()->get(),
+            'setting'   => Event_setting::firstWhere('event', 'effect')
         ]);
     }
 
@@ -29,9 +32,20 @@ class EffectController extends Controller
      */
     public function create()
     {
-        return view('main.effect.regis', [
-            'title' => 'Registrasi EFFECT'
-        ]);
+        $setting = Event_setting::firstWhere('event', 'effect');
+        $timenow = Carbon::now();
+
+        if ($setting->form_open && $timenow->greaterThan($setting->form_open)) {
+            if ($timenow->lessThan($setting->form_closed)) {
+                return view('main.effect.regis', [
+                    'title' => 'Registrasi EFFECT'
+                ]);
+            } else {
+                return view('errors.closed');
+            }
+        } else {
+            return view('errors.comingsoon');
+        }
     }
 
     /**

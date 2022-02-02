@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Bundle;
+use App\Models\Event_setting;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class BundleController extends Controller
@@ -17,7 +19,8 @@ class BundleController extends Controller
     {
         return view('admin.guest.index', [
             'title'     => 'Data Pengunjung',
-            'datas'     => Bundle::all()
+            'datas'     => Bundle::all(),
+            'setting'   => Event_setting::firstWhere('event', 'ticket')
         ]);
     }
 
@@ -28,21 +31,32 @@ class BundleController extends Controller
      */
     public function create()
     {
-        $tickets = Bundle::all();
-        $registered = 0;
-        foreach ($tickets as $ticket) {
-            $registered = $registered + $ticket->ticket;
-        }
+        $setting = Event_setting::firstWhere('event', 'ticket');
+        $timenow = Carbon::now();
 
-        if ($registered < 300) {
-            $ticket = 300 - $registered;
-        }
+        if ($setting->form_open && $timenow->greaterThan($setting->form_open)) {
+            if ($timenow->lessThan($setting->form_closed)) {
+                $tickets = Bundle::all();
+                $registered = 0;
+                foreach ($tickets as $ticket) {
+                    $registered = $registered + $ticket->ticket;
+                }
 
-        return view('main.if-talk.regis', [
-            'title' => 'Registrasi Pengunjung',
-            'register'  => $registered,
-            'ticket'    => $ticket
-        ]);
+                if ($registered < 300) {
+                    $ticket = 300 - $registered;
+                }
+
+                return view('main.if-talk.regis', [
+                    'title' => 'Registrasi Pengunjung',
+                    'register'  => $registered,
+                    'ticket'    => $ticket
+                ]);
+            } else {
+                return view('errors.closed');
+            }
+        } else {
+            return view('errors.comingsoon');
+        }
     }
 
     /**

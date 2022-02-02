@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Event_setting;
 use App\Models\Exh_seller;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class Exh_sellerController extends Controller
@@ -17,7 +19,8 @@ class Exh_sellerController extends Controller
     {
         return view('admin.seller.index', [
             'title'     => 'Data Pendaftar Food & Beverage IECC',
-            'datas'     => Exh_seller::latest()->get()
+            'datas'     => Exh_seller::latest()->get(),
+            'setting'   => Event_setting::firstWhere('event', 'food-and-beverage')
         ]);
     }
 
@@ -28,9 +31,20 @@ class Exh_sellerController extends Controller
      */
     public function create()
     {
-        return view('main.iecc.fnb.regis', [
-            'title' => 'Registrasi F&B IECC'
-        ]);
+        $setting = Event_setting::firstWhere('event', 'food-and-beverage');
+        $timenow = Carbon::now();
+
+        if ($setting->form_open && $timenow->greaterThan($setting->form_open)) {
+            if ($timenow->lessThan($setting->form_closed)) {
+                return view('main.iecc.fnb.regis', [
+                    'title' => 'Registrasi F&B IECC'
+                ]);
+            } else {
+                return view('errors.closed');
+            }
+        } else {
+            return view('errors.comingsoon');
+        }
     }
 
     /**

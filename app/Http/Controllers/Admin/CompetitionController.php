@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Competition;
+use App\Models\Event_setting;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class CompetitionController extends Controller
@@ -17,7 +19,8 @@ class CompetitionController extends Controller
     {
         return view('admin.msm.index', [
             'title'     => 'Data Pendaftar MSM',
-            'datas'     => Competition::latest()->get()
+            'datas'     => Competition::latest()->get(),
+            'setting'   => Event_setting::firstWhere('event', 'msm')
         ]);
     }
 
@@ -28,9 +31,20 @@ class CompetitionController extends Controller
      */
     public function create()
     {
-        return view('main.msm.regis', [
-            'title' => 'Registrasi MSM'
-        ]);
+        $setting = Event_setting::firstWhere('event', 'msm');
+        $timenow = Carbon::now();
+
+        if ($setting->form_open && $timenow->greaterThan($setting->form_open)) {
+            if ($timenow->lessThan($setting->form_closed)) {
+                return view('main.msm.regis', [
+                    'title' => 'Registrasi MSM'
+                ]);
+            } else {
+                return view('errors.closed');
+            }
+        } else {
+            return view('errors.comingsoon');
+        }
     }
 
     /**

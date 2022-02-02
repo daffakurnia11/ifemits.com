@@ -20,6 +20,28 @@
     <div id="notification" data-flashdata="{{ session('notif') }}"></div>
   @endif
 
+  <h6 class="mb-0 text-uppercase">Pengaturan Form Registrasi</h6>
+  <hr>
+  <div class="card col-lg-6">
+    <form action="/admin/setting/if-web" method="post">
+      @csrf
+      @method('PUT')
+      <div class="card-body">
+        <div class="mb-3">
+          <label class="form-label">Tanggal Buka</label>
+          <input class="result form-control" type="text" value="{{ $setting->form_open }}" name="form_open" id="datetimeOpen" placeholder="Atur jadwal pembukaan registrasi">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Tanggal Tutup</label>
+          <input class="result form-control" type="text" value="{{ $setting->form_closed }}" name="form_closed" id="datetimeClosed" placeholder="Atur jadwal penutupan registrasi">
+        </div>
+      </div>
+      <div class="card-footer">
+        <button type="submit" class="btn btn-primary d-block ms-auto">Atur!</button>
+      </div>
+    </form>
+  </div>
+
   <h6 class="mb-0 text-uppercase">Data Pendaftar IF-WEB</h6>
   <hr>
   <div class="card">

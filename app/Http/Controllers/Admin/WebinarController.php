@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Event_setting;
 use App\Models\Webinar;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class WebinarController extends Controller
@@ -18,7 +20,8 @@ class WebinarController extends Controller
         return view('admin.if-web.index', [
             'title'     => 'Data Pendaftar IF-WEB',
             // 'datas'     => Webinar::whereRaw('MONTH(created_at) = 11')->get()
-            'datas'     => Webinar::latest()->get()
+            'datas'     => Webinar::latest()->get(),
+            'setting'   => Event_setting::firstWhere('event', 'if-web')
         ]);
     }
 
@@ -29,9 +32,20 @@ class WebinarController extends Controller
      */
     public function create()
     {
-        return view('main.if-web.regis', [
-            'title' => 'Registrasi IF-WEB'
-        ]);
+        $setting = Event_setting::firstWhere('event', 'if-web');
+        $timenow = Carbon::now();
+
+        if ($setting->form_open && $timenow->greaterThan($setting->form_open)) {
+            if ($timenow->lessThan($setting->form_closed)) {
+                return view('main.if-web.regis', [
+                    'title' => 'Registrasi IF-WEB'
+                ]);
+            } else {
+                return view('errors.closed');
+            }
+        } else {
+            return view('errors.comingsoon');
+        }
     }
 
     /**

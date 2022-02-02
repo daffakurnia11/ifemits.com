@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Event_setting;
 use App\Models\Exh_exhibitor;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class Exh_exhibitorController extends Controller
@@ -17,7 +19,8 @@ class Exh_exhibitorController extends Controller
     {
         return view('admin.exhibitor.index', [
             'title'     => 'Data Pendaftar Exhibitor IECC',
-            'datas'     => Exh_exhibitor::latest()->get()
+            'datas'     => Exh_exhibitor::latest()->get(),
+            'setting'   => Event_setting::firstWhere('event', 'exhibitor')
         ]);
     }
 
@@ -28,9 +31,20 @@ class Exh_exhibitorController extends Controller
      */
     public function create()
     {
-        return view('main.iecc.exhibitor.regis', [
-            'title' => 'Registrasi Exhibitor IECC'
-        ]);
+        $setting = Event_setting::firstWhere('event', 'exhibitor');
+        $timenow = Carbon::now();
+
+        if ($setting->form_open && $timenow->greaterThan($setting->form_open)) {
+            if ($timenow->lessThan($setting->form_closed)) {
+                return view('main.iecc.exhibitor.regis', [
+                    'title' => 'Registrasi Exhibitor IECC'
+                ]);
+            } else {
+                return view('errors.closed');
+            }
+        } else {
+            return view('errors.comingsoon');
+        }
     }
 
     /**

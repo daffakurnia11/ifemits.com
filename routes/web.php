@@ -29,6 +29,9 @@ Route::middleware('visited')->group(function () {
   Route::get('/coming-soon', function () {
     return view('errors.comingsoon');
   });
+  Route::get('/closed', function () {
+    return view('errors.closed');
+  });
 
   Route::prefix('if-web')->group(function () {
     Route::get('/', [PagesController::class, 'webinar_info']);
@@ -103,6 +106,8 @@ Route::prefix('admin')->middleware('auth')->group(function () {
   Route::resource('ticket', BundleController::class)->parameters([
     'ticket'  => 'bundle'
   ])->except(['create', 'store', 'edit', 'update']);
+
+  Route::put('/setting/{event_setting}', [AdminController::class, 'event_setting']);
 });
 
 Route::get('/visitor_data', [AdminController::class, 'visitor_data']);

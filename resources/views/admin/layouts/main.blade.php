@@ -9,6 +9,7 @@
   <!-- Plugins -->
   <link rel="stylesheet" href="/vendor/notifications/css/lobibox.min.css" />
   <link rel="stylesheet" href="/vendor/metismenu/css/metisMenu.min.css"/>
+  {{-- Date Time Picker --}}
 	<link rel="stylesheet" href="/vendor/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   {{-- Data Tables --}}

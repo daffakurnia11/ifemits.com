@@ -73,6 +73,15 @@ $(function () {
     })
   });
 
+  $('.topic-name').on('click', function () {
+    if ($(this).hasClass('collapsed')) {
+      $(this).find('.fas').css('transform', 'rotate(360deg)').css('transition', 'ease-in-out 0.3s');
+    }
+    else {
+      $(this).find('.fas').css('transform', 'rotate(180deg)').css('transition', 'ease-in-out 0.3s');
+    }
+  });
+
   const meaning = ['Adaptif', 'Bentuk Isometri', 'Gear', '6 Gerigi', 'Lubang di tengah'];
   const desc = [
     'Mudah menyesuaikan (diri) dengan keadaan',

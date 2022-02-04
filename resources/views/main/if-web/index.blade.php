@@ -60,7 +60,7 @@
       </h2>
       <div class="accordion" id="topicAccordion">
         <div class="accordion-item topic-content mx-auto" data-aos="fade-down" data-aos-offset="0" data-aos-delay="500">
-          <button  class="text-center topic-name" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">The Truth About Electric Vehicle</button>
+          <button  class="text-center topic-name" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">The Truth About Electric Vehicle <i class="fas fa-caret-down" style="transform: rotate(180deg);"></i></button>
           <p id="collapseOne" class="accordion-collapse collapse show topic-desc" data-bs-parent="#topicAccordion">
             Kendaraan listrik merupakan kata yang sering kita dengar, tetapi apakah setiap orang yang pernah mendengar
             kata tersebut benar-benar sudah tau tentang “kendaraan listrik” ? Pada salah satu topik IF-WEB 2022 ini akan
@@ -69,13 +69,13 @@
           </p>
         </div>
         <div class="accordion-item topic-content mx-auto" data-aos="fade-down" data-aos-offset="0" data-aos-delay="750">
-          <button  class="text-center topic-name" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">The Future of Local Electric Vehicle Production</button>
+          <button  class="text-center topic-name collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">The Future of Local Electric Vehicle Production <i class="fas fa-caret-down"></i></button>
           <p id="collapseTwo" class="accordion-collapse collapse topic-desc" data-bs-parent="#topicAccordion">
             Peminat kendaraan listrik sangat meningkat saat sekarang ini, diikuti dengan semakin banyaknya inovasi yang diciptakan oleh anak bangsa. Inovasi-inovasi ini merupakan modal awal Indonesia untuk memproduksi kendaraan listrik buatan lokal. Sebenarnya bagaimana potensi Indonesia dalam memproduksi kendaraan listrik lokal? Topik ini akan didiskusikan bersama narasumber yang ahli pada bidangnya, stay tune di IF-WEB 2022 !!
           </p>
         </div>
         <div class="accordion-item topic-content mx-auto" data-aos="fade-down" data-aos-offset="0" data-aos-delay="1000">
-          <button  class="text-center topic-name" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">Electric Vehicle Potential for Competition</button>
+          <button  class="text-center topic-name collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">Electric Vehicle Potential for Competition <i class="fas fa-caret-down"></i></button>
           <p id="collapseThree" class="accordion-collapse collapse topic-desc" data-bs-parent="#topicAccordion">
             Penggunaan kendaraan listrik sedang naik daun pada saat ini, tetapi bagaimana jika kendaraan listrik juga digunakan untuk kompetisi perlombaan? Yuk simak topik ini hanya di IF-WEB 2022 !!
           </p>

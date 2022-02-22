@@ -15,9 +15,10 @@ class Competition extends Model
         'phone',
         'data',
         'twibbon',
-        'letter',
-        'recommendation',
-        'payment'
+        // 'letter',
+        // 'recommendation',
+        'payment',
+        'name'
     ];
 
     public function getRouteKeyName()

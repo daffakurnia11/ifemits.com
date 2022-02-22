@@ -52,6 +52,7 @@
             <tr>
               <th>No.</th>
               <th>Register Code</th>
+              <th>Nama Tim</th>
               <th>Email</th>
               <th>Telepon</th>
               <th>Action</th>
@@ -62,6 +63,7 @@
             <tr>
               <td class="text-center align-middle">{{ $loop->iteration }}</td>
               <td class="align-middle text-center">{{ $data->register_code }}</td>
+              <td class="align-middle text-center">{{ $data->name }}</td>
               <td class="align-middle">{{ $data->email }}</td>
               <td class="align-middle">{{ $data->phone }}</td>
               <td class="align-middle text-center">
@@ -81,6 +83,7 @@
             <tr>
               <th>No.</th>
               <th>Register Code</th>
+              <th>Nama Tim</th>
               <th>Email</th>
               <th>Telepon</th>
               <th>Action</th>

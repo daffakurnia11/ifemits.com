@@ -29,6 +29,17 @@
           <div class="row">
             <div class="col-lg-12 col-xxl-6 col-md-6">
               <div class="mt-3">
+                <label for="name" class="form-label">Nama Tim</label>
+                <input type="text" value="{{ old('name') }}" name="name" class="form-control @error('name') is-invalid @enderror" id="name" tabindex="1" autofocus>
+                @error('name')
+                <div class="invalid-feedback mt-2">
+                  <p class="mb-0">{{ $message }}</p>
+                </div>
+                @enderror
+              </div>
+            </div>
+            <div class="col-lg-12 col-xxl-6 col-md-6">
+              <div class="mt-3">
                 <label for="email" class="form-label">Email Aktif</label>
                 <input type="email" value="{{ old('email') }}" name="email" class="form-control @error('email') is-invalid @enderror" id="email" tabindex="1" autofocus>
                 @error('email')
@@ -52,48 +63,36 @@
                 </div>
               </div>
             </div>
+            <div class="col-lg-12 col-xxl-6 col-md-6">
+              <div class="mt-3">
+                <label for="email" class="form-label">Link Kelengkapan Berkas</label>
+                <a href="/BERKASMSM2022" class="form-link d-block py-2">ifemits.com/BERKASMSM2022</a>
+              </div>
+            </div>
           </div>
           <div class="row">
             <div class="col-lg-12 col-xxl-6 col-md-6 order-2 order-md-1 order-lg-2 order-xxl-1">
               <div class="mt-3">
                 <label for="data" class="form-label">Upload Biodata Tim (.pdf)</label>
                 <input type="file" name="data[]" class="form-control @error('data') is-invalid @enderror" id="data" tabindex="3" accept=".pdf" multiple>
+                <small class="d-block my-2 text-warning">Multiple files format: .pdf max 1MB</small>
+                @error('data')
+                <p class="text-danger mb-0">{{ $message }}</p>
+                @enderror
               </div>
             </div>
-            <div class="col-lg-12 col-xxl-6 col-md-6 order-1 order-md-2 order-lg-1 order-xxl-2">
-              <div class="mt-3">
-                <label for="email" class="form-label">Link Template Biodata Tim</label>
-                <a href="" class="form-link d-block py-2">intip.in.blablablabla.com</a>
-              </div>
-            </div>
-            <div class="col-12 order-3">
-              <small class="d-block my-2 text-warning">Multiple files format: .pdf max 1MB</small>
-              @error('data')
-              <p class="text-danger mb-0">{{ $message }}</p>
-              @enderror
-            </div>
-          </div>
-          <div class="row">
             <div class="col-lg-12 col-xxl-6 col-md-6 order-2 order-md-1 order-lg-2 order-xxl-1">
               <div class="mt-3">
                 <label for="twibbon" class="form-label">Upload Screenshot Twibbon</label>
                 <input type="file" name="twibbon[]" class="form-control @error('twibbon') is-invalid @enderror" id="twibbon" tabindex="4" accept=".png,.jpg,.jpeg" multiple>
+                <small class="d-block my-2 text-warning">Multiple files format: .png, .jpg, .jpeg max 1MB</small>
+                @error('twibbon')
+                <p class="text-danger mb-0">{{ $message }}</p>
+                @enderror
               </div>
-            </div>
-            <div class="col-lg-12 col-xxl-6 col-md-6 order-1 order-md-2 order-lg-1 order-xxl-2">
-              <div class="mt-3">
-                <label for="email" class="form-label">Link Twibbon</label>
-                <a href="" class="form-link d-block py-2">intip.in.blablablabla.com</a>
-              </div>
-            </div>
-            <div class="col-12 order-3">
-              <small class="d-block my-2 text-warning">Multiple files format: .png, .jpg, .jpeg max 1MB</small>
-              @error('twibbon')
-              <p class="text-danger mb-0">{{ $message }}</p>
-              @enderror
             </div>
           </div>
-          <div class="row">
+          {{-- <div class="row">
             <div class="col-lg-12 col-xxl-6 col-md-6 order-2 order-md-1 order-lg-2 order-xxl-1">
               <div class="mt-3">
                 <label for="letter" class="form-label">Upload Surat Pernyataan</label>
@@ -122,7 +121,7 @@
               <p class="mb-0">{{ $message }}</p>
             </div>
             @enderror
-          </div>
+          </div> --}}
           <div class="mt-3">
             <label for="payment" class="form-label">Upload Bukti Pembayaran</label>
             <input type="file" name="payment" class="form-control @error('payment') is-invalid @enderror" id="payment" tabindex="7" accept=".jpg,.jpeg,.png,.pdf">

@@ -56,16 +56,17 @@ class CompetitionController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
+            'name'              => 'required',
             'email'             => 'required|email:dns|unique:competitions',
             'phone'             => 'required|digits_between:10,13|numeric',
             'data'              => 'required',
             'data.*'            => 'mimes:pdf|max:1024',
             'twibbon'           => 'required',
             'twibbon.*'         => 'mimes:jpg,jpeg,png|max:1024',
-            'letter'            => 'required',
-            'letter.*'          => 'mimes:pdf|max:1024',
-            'recommendation'    => 'required',
-            'recommendation.*'  => 'mimes:jpg,jpeg,png,pdf|max:1024',
+            // 'letter'            => 'required',
+            // 'letter.*'          => 'mimes:pdf|max:1024',
+            // 'recommendation'    => 'required',
+            // 'recommendation.*'  => 'mimes:jpg,jpeg,png,pdf|max:1024',
             'payment'           => 'required|mimes:jpg,jpeg,png,pdf|max:1024',
         ]);
 
@@ -77,7 +78,7 @@ class CompetitionController extends Controller
         }
 
         // Uploading Files
-        if ($request->hasFile('data') && $request->hasFile('twibbon') && $request->hasFile('letter') && $request->hasFile('recommendation') && $request->hasFile('payment')) {
+        if ($request->hasFile('data') && $request->hasFile('twibbon') && $request->hasFile('payment')) {
             $register_code = 'MSM-' . (Competition::count() ?? 0) + 1;
             $validated['register_code'] = $register_code;
 
@@ -106,28 +107,28 @@ class CompetitionController extends Controller
             $validated['twibbon'] = implode(';', $twibbonName);
 
             // Uploading Letter Form
-            $letterFiles = $request->file('letter');
-            $letterName = [];
-            $index = 1;
-            foreach ($letterFiles as $file) {
-                $filename = $register_code . '_letter' . $index . '.' . $file->extension();
-                $index++;
-                $file->move(public_path('files/competition/letter'), $filename);
-                $letterName[] = $filename;
-            }
-            $validated['letter'] = implode(';', $letterName);
+            // $letterFiles = $request->file('letter');
+            // $letterName = [];
+            // $index = 1;
+            // foreach ($letterFiles as $file) {
+            //     $filename = $register_code . '_letter' . $index . '.' . $file->extension();
+            //     $index++;
+            //     $file->move(public_path('files/competition/letter'), $filename);
+            //     $letterName[] = $filename;
+            // }
+            // $validated['letter'] = implode(';', $letterName);
 
             // Uploading Recommendation Form
-            $recommendationFiles = $request->file('recommendation');
-            $recommendationName = [];
-            $index = 1;
-            foreach ($recommendationFiles as $file) {
-                $filename = $register_code . '_recommendation' . $index . '.' . $file->extension();
-                $index++;
-                $file->move(public_path('files/competition/recommendation'), $filename);
-                $recommendationName[] = $filename;
-            }
-            $validated['recommendation'] = implode(';', $recommendationName);
+            // $recommendationFiles = $request->file('recommendation');
+            // $recommendationName = [];
+            // $index = 1;
+            // foreach ($recommendationFiles as $file) {
+            //     $filename = $register_code . '_recommendation' . $index . '.' . $file->extension();
+            //     $index++;
+            //     $file->move(public_path('files/competition/recommendation'), $filename);
+            //     $recommendationName[] = $filename;
+            // }
+            // $validated['recommendation'] = implode(';', $recommendationName);
 
             $paymentFile = $register_code . '_payment.' . $request->payment->extension();
             $validated['payment'] = $paymentFile;
@@ -167,15 +168,15 @@ class CompetitionController extends Controller
         $scans = explode(';', $competition->recommendation);
         $images = explode(';', $competition->twibbon);
 
-        foreach ($scans as $scan) {
-            unlink(public_path('files/competition/recommendation/' . $scan));
-        }
+        // foreach ($scans as $scan) {
+        //     unlink(public_path('files/competition/recommendation/' . $scan));
+        // }
         foreach ($datas as $data) {
             unlink(public_path('files/competition/data/' . $data));
         }
-        foreach ($letters as $letter) {
-            unlink(public_path('files/competition/letter/' . $letter));
-        }
+        // foreach ($letters as $letter) {
+        //     unlink(public_path('files/competition/letter/' . $letter));
+        // }
         foreach ($images as $image) {
             unlink(public_path('files/competition/twibbon/' . $image));
         }

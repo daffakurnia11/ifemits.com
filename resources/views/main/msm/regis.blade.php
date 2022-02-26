@@ -66,7 +66,7 @@
             <div class="col-lg-12 col-xxl-6 col-md-6">
               <div class="mt-3">
                 <label for="email" class="form-label">Link Kelengkapan Berkas</label>
-                <a href="/BERKASMSM2022" class="form-link d-block py-2">ifemits.com/BERKASMSM2022</a>
+                <a href="/BERKASMSM2022" target="_blank" class="form-link d-block py-2">ifemits.com/BERKASMSM2022</a>
               </div>
             </div>
           </div>

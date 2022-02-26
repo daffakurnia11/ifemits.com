@@ -36,11 +36,7 @@
     <div class="container about">
       <img src="/img/icon/event-cross.png" class="about-icon" data-aos="zoom-in" data-aos-delay="500" alt="">
       <p class="about-content" data-aos="zoom-in">
-        Workshop merupakan pelatihan desain berbasis Auto-Cad, yang akan diikuti oleh semifinalis Mechanical Science
-        Marathon. Pada workshop tahun ini, IFEM mendapat kesempatan untuk bekerjasama dengan salah satu lembaga
-        pelatihan terpercaya yaitu MECHTECH untuk menjadi mentor pada workshop ini dengan mengusung tema “Prepare the
-        Next Generation of Engineers for A More Advanced Indonesia”. Workshop ini pastinya akan menambah wawasan dan
-        ilmu para peserta, dan mempersiapkan para engineers muda untuk berkarya untuk bangsa.
+        Workshop merupakan pelatihan desain berbasis <strong>Auto-Cad</strong>, yang akan diikuti oleh semifinalis <strong>Mechanical Science Marathon</strong>. Pada workshop tahun ini, IFEM mendapat kesempatan untuk bekerjasama dengan salah satu lembaga pelatihan terpercaya untuk menjadi mentor pada workshop ini dengan mengusung tema “<strong>Prepare the Next Generation of Engineers for A More Advanced Indonesia</strong>”. Workshop ini pastinya akan menambah wawasan dan ilmu para peserta, dan mempersiapkan para engineers muda untuk berkarya untuk bangsa.
       </p>
     </div>
   </section>

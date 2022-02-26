@@ -136,7 +136,7 @@
             <div class="col-lg-12 col-xxl-6 col-md-6">
               <div class="mt-3">
                 <label for="email" class="form-label">Link Download Poster IF-WEB 2022</label>
-                <a href="" class="form-link d-block py-2">intip.in.blablablabla.com</a>
+                <a href="/PosterIF-WEB2022" target="_blank" class="form-link d-block py-2">ifemits.com/PosterIF-WEB2022</a>
               </div>
             </div>
           </div>

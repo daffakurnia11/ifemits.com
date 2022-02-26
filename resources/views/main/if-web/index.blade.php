@@ -37,7 +37,7 @@
           <div class="about">
             <img src="/img/icon/event-cross.png" class="about-icon" data-aos="zoom-in" data-aos-delay="500" alt="">
             <p class="about-content" data-aos="zoom-in">
-              IF-WEB merupakan rangkaian kegiatan pembuka dari IFEM 2022. Pada kegiatan webinar kali ini mengusung tema “<strong><em>Potensi Mobil Listrik di Indonesia</em></strong>”, dimana akan dihadirkan pembicara dari pihak dosen Departemen Teknik Mesin FT-IRS ITS, seseorang yang ahli dalam bidang industri EV dan bidang kompetisi mobil listrik di Indonesia.
+              IF-WEB merupakan rangkaian kegiatan pembuka dari IFEM 2022. Pada kegiatan webinar kali ini mengusung tema “<strong>Potensi Mobil Listrik di Indonesia</strong>”, dimana akan menghadirkan pembicara pembicara hebat seperti seseorang yang ahli dalam bidang industri EV dan bidang kompetisi mobil listrik di Indonesia.
             </p>
             <a href="/if-web/registrasi" class="register-button text-center d-block mx-auto" data-aos="fade-up" data-aos-delay="500" data-aos-offset="0">Register Now!</a>
           </div>

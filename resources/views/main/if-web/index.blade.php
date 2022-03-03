@@ -95,18 +95,84 @@
         <span class="arrow-title-text px-4" data-aos="zoom-in">Speakers</span>
         <img src="/img/icon/four-arrow-left.svg" class="arrow-title-right" alt="" data-aos="fade-left" data-aos-delay="250">
       </h2>
+      <!-- First Speaker -->
       <div class="speaker-content">
+        <h3 class="speaker-topic text-center">
+          The Truth About Electric Vehicle
+        </h3>
         <div class="row align-items-center">
-          <div class="col-md-6">
+          <div class="col-md-5 col-sm-6">
             <div class="text-center">
-              <img src="/img/speaker-placeholder.png" class="speaker-photo" alt="" data-aos="zoom-in" data-aos-delay="1000">
+              <div class="photo">
+                <img src="/img/webinar-speaker-1.png" class="photo-image" alt="">
+                <div class="photo-detail d-flex flex-column justify-content-center">
+                  <h4 class="detail-name text-center mb-0">Niko Questera</h4>
+                  <p class="detail-desc text-center mb-0">Founder of QUESTMOTORS</p>
+                </div>
+                <img src="/img/icon/gradient-circle.png" class="photo-circle" alt="">
+              </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <h3 class="text-center speaker-detail" data-aos="fade-down" data-aos-delay="500">Stay Tune!</h3>
+          <div class="col-md-7 col-sm-6">
+            <p class="speaker-detail mb-0 mt-4 mt-sm-0">
+              Niko Questera adalah seorang insinyur yang memiliki ketertarikan yang sangat besar terhadap kendaraan listrik yang ramah lingkungan. Beliau pernah bekerja untuk Tesla di Amerika Serikat. Namun, saat ini beliau sedang mengembangkan QUESTMOTORS dan kendaraan listrik yang menjadi kebanggaannya.
+            </p>
           </div>
         </div>
       </div>
+      <!-- End of First Speaker -->
+      <!-- Second Speaker -->
+      <div class="speaker-content">
+        <h3 class="speaker-topic text-center">
+          The Future of Local Vehicle Production
+        </h3>
+        <div class="row align-items-center">
+          <div class="col-md-5 col-sm-6 order-1">
+            <div class="text-center">
+              <div class="photo">
+                <img src="/img/webinar-speaker-2.png" class="photo-image" alt="">
+                <div class="photo-detail d-flex flex-column justify-content-center">
+                  <h4 class="detail-name text-center mb-0">Triharsa Adicahya</h4>
+                  <p class="detail-desc text-center mb-0">CEO/Founder SPORA EV</p>
+                </div>
+                <img src="/img/icon/gradient-circle.png" class="photo-circle" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7 col-sm-6 order-2">
+            <p class="speaker-detail mb-0 mt-4 mt-sm-0">
+              Triharsa Adicahya atau kerap disapa Pak Adi adalah seorang ahli dalam bidang kendaraan listrik. Sebelumnya, beliau banyak menghabiskan sebagian besar pekerjaan profesionalnya sebagai seorang Engineer dan product designer di industri otomotif. Kini beliau menjabat sebagai Founder/CEO dari startup teknologi yang berfokus pada pengembangan dan pengkonversian electric vehicle di Indonesia.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- End of Second Speaker -->
+      <!-- Third Speaker -->
+      <div class="speaker-content">
+        <h3 class="speaker-topic text-center">
+          Electric Vehicle Potential for Competition
+        </h3>
+        <div class="row align-items-center">
+          <div class="col-md-5 col-sm-6">
+            <div class="text-center">
+              <div class="photo">
+                <img src="/img/webinar-speaker-3.png" class="photo-image" alt="">
+                <div class="photo-detail d-flex flex-column justify-content-center">
+                  <h4 class="detail-name text-center mb-0">Hillarius Satrio</h4>
+                  <p class="detail-desc text-center mb-0">Journalist/Editor of AutonetMagz.com</p>
+                </div>
+                <img src="/img/icon/gradient-circle.png" class="photo-circle" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7 col-sm-6">
+            <p class="speaker-detail mb-0 mt-4 mt-sm-0">
+              Hillarius Satrio adalah seorang jurnalis sekaligus editor di salah satu media otomotif Indonesia. Namanya sudah tidak asing lagi bagi kalangan pecinta otomotif. Hillarius Satrio sering membagikan informasi mengenai dunia otomotif baik berupa tulisan maupun video review yang beberapa karyanya pernah mendapatkan penghargaan sebagai berita dan review produk terbaik. Selain itu, Hillarius Satrio juga pernah mengikuti “Porsche Sport Driving School : Master Class” 
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- End of Third Speaker -->
     </div>
     <img src="/img/icon/gradient-circle.png" class="speaker-icon1" alt="">
     <img src="/img/icon/gradient-circle.png" class="speaker-icon2" alt="">

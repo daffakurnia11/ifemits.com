@@ -127,6 +127,6 @@ class WebinarController extends Controller
         }
 
         $webinar->delete();
-        return redirect('/admin/webinar')->with('notif', "Data deleted");
+        return redirect('/admin/if-web')->with('notif', "Data deleted");
     }
 }

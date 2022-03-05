@@ -110,9 +110,16 @@
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="Lainnya" name="promotion[]" id="choice4"
-                    tabindex="9">
+                  <input class="form-check-input" type="checkbox" value="Media Partner" name="promotion[]" id="choice4"
+                    tabindex="8">
                   <label class="form-check-label" for="choice4">
+                    Media Partner
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Lainnya" name="promotion[]" id="choice5"
+                    tabindex="9">
+                  <label class="form-check-label" for="choice5">
                     Lainnya
                   </label>
                 </div>
@@ -123,7 +130,7 @@
             </div>
             <div class="col-lg-12 col-xxl-6 col-md-6">
               <div class="mt-3">
-                <label for="share" class="form-label">Bukti Share Poster IF-WEB 2022</label>
+                <label for="share" class="form-label">Bukti Share Poster IF-WEB 2022 di Instagram Story dan Tag 3 temanmu</label>
                 <input type="file" name="share[]" class="form-control @error('share') is-invalid @enderror" id="share" tabindex="10" accept=".jpg,.jpeg,.png" multiple>
                 <small class="d-block my-2 text-warning">Multiple files format: .png, .jpg, .jpeg max 1MB</small>
                 @error('share')

@@ -133,6 +133,6 @@ class Exh_exhibitorController extends Controller
         unlink(public_path('files/pameran/exhibitor/payment/' . $exh_exhibitor->payment));
 
         $exh_exhibitor->delete();
-        return redirect('/admin/exhibitor')->with('notif', "Data deleted");
+        return redirect('/admin/iecc/exhibitor')->with('notif', "Data deleted");
     }
 }

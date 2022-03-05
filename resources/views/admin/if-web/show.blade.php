@@ -56,7 +56,7 @@
               </form>
             </div>
           </div>
-          <form action="/admin/webinar/{{ $webinar->register_code }}" method="post">
+          <form action="/admin/if-web/{{ $webinar->register_code }}" method="post">
             @csrf
             @method('DELETE')
             <div class="text-end mt-2">

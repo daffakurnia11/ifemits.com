@@ -67,7 +67,7 @@
               </form>
             </div>
           </div>
-          <form action="/admin/exhibitor/{{ $exhibitor->register_code }}" method="post">
+          <form action="/admin/iecc/exhibitor/{{ $exhibitor->register_code }}" method="post">
             @csrf
             @method('DELETE')
             <div class="text-end mt-2">

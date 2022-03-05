@@ -150,6 +150,6 @@ class Exh_sellerController extends Controller
         unlink(public_path('files/pameran/seller/payment/' . $exh_seller->payment));
 
         $exh_seller->delete();
-        return redirect('/admin/food-and-beverage')->with('notif', "Data deleted");
+        return redirect('/admin/iecc/food-and-beverage')->with('notif', "Data deleted");
     }
 }
